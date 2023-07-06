@@ -20,15 +20,15 @@ namespace WebApplication1.Pages
         
         private readonly AzureSettings _azureSettingsIOptionsMonitor;
 
-        private readonly PageTitles _title;
+        private readonly PageDetails _title;
 
-        public OptionsMonitorExampleModel(IOptionsMonitor<AzureSettings> azureSettings, IOptionsSnapshot<PageTitles> pageTitle)
+        public OptionsMonitorExampleModel(IOptionsMonitor<AzureSettings> azureSettings, IOptionsSnapshot<PageDetails> pageTitle)
         {
             _azureSettings = azureSettings;
             _azureSettingsIOptionsMonitor = _azureSettings.CurrentValue;
             azureSettings.OnChange(_ => OnAzureSettingsValueChange());
 
-            _title = pageTitle.Get(PageTitles.Monitor);
+            _title = pageTitle.Get(PageDetails.Monitor);
             Title = _title.Title;
         }
 

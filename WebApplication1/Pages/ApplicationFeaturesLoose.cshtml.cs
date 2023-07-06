@@ -15,14 +15,14 @@ public class ApplicationFeaturesLooseModel : PageModel
     private readonly IConfiguration _configuration;
     private ApplicationFeatures _features = new();
 
-    private readonly PageTitles _title;
+    private readonly PageDetails _title;
 
-    public ApplicationFeaturesLooseModel(IConfiguration configuration, IOptionsSnapshot<PageTitles> pageTitle)
+    public ApplicationFeaturesLooseModel(IConfiguration configuration, IOptionsSnapshot<PageDetails> pageTitle)
     {
         _configuration = configuration;
         _configuration.Bind("ApplicationFeatures:IndexPage", _features);
 
-        _title = pageTitle.Get(PageTitles.ApplicationFeaturesLoose);
+        _title = pageTitle.Get(PageDetails.ApplicationFeaturesLoose);
         Title = _title.Title;
     }
     public void OnGet()

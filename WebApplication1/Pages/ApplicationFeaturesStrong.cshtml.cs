@@ -13,17 +13,17 @@ public class ApplicationFeaturesStrongModel : PageModel
     [ViewData]
     public string Title { get; set; }
 
-    private readonly PageTitles _title;
+    private readonly PageDetails _title;
 
     [BindProperty]
     public string ConnectionString { get; set; }
     private readonly ApplicationFeatures _features;
-    public ApplicationFeaturesStrongModel(IOptionsSnapshot<ApplicationFeatures> applicationFeatures, IOptionsSnapshot<PageTitles> pageTitle)
+    public ApplicationFeaturesStrongModel(IOptionsSnapshot<ApplicationFeatures> applicationFeatures, IOptionsSnapshot<PageDetails> pageTitle)
     {
         _features = applicationFeatures.Value;
         ConnectionString = _features.ConnectionString;
 
-        _title = pageTitle.Get(PageTitles.ApplicationFeaturesStrong);
+        _title = pageTitle.Get(PageDetails.ApplicationFeaturesStrong);
         Title = _title.Title;
     }
     public void OnGet()

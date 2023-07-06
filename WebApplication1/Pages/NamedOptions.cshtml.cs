@@ -15,13 +15,13 @@ public class NamedOptionsModel : PageModel
     private readonly TopItemSettings _monthTopItem;
     private readonly TopItemSettings _yearTopItem;
 
-    private readonly PageTitles _title;
+    private readonly PageDetails _title;
 
-    public NamedOptionsModel(IOptionsSnapshot<TopItemSettings> topItemSettings, IOptionsSnapshot<PageTitles> pageTitle)
+    public NamedOptionsModel(IOptionsSnapshot<TopItemSettings> topItemSettings, IOptionsSnapshot<PageDetails> pageTitle)
     {
         _monthTopItem = topItemSettings.Get(TopItemSettings.Month);
         _yearTopItem = topItemSettings.Get(TopItemSettings.Year);
-        _title = pageTitle.Get(PageTitles.NamedOptions);
+        _title = pageTitle.Get(PageDetails.NamedOptions);
 
         Title = _title.Title;
 

@@ -21,13 +21,13 @@ public class IndexModel : PageModel
 
     private readonly AzureSettings _azureSettings;
 
-    private readonly PageTitles _title;
+    private readonly PageDetails _title;
 
-    public IndexModel(IOptions<AzureSettings> azureSettings, IOptionsSnapshot<PageTitles> pageTitle)
+    public IndexModel(IOptions<AzureSettings> azureSettings, IOptionsSnapshot<PageDetails> pageTitle)
     {
         _azureSettings = azureSettings.Value;
 
-        _title = pageTitle.Get(PageTitles.MainPage);
+        _title = pageTitle.Get(PageDetails.MainPage);
         Title = _title.Title;
     }
 

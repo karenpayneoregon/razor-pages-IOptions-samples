@@ -59,20 +59,20 @@ public class Program
 
     private static void ConfigurePageTitles(WebApplicationBuilder builder)
     {
-        builder.Services.Configure<PageTitles>(PageTitles.NamedOptions,
-            builder.Configuration.GetSection(PageTitles.NamedOptions));
+        builder.Services.Configure<PageDetails>(PageDetails.NamedOptions,
+            builder.Configuration.GetSection(PageDetails.NamedOptions));
 
-        builder.Services.Configure<PageTitles>(PageTitles.MainPage,
-            builder.Configuration.GetSection(PageTitles.MainPage));
+        builder.Services.Configure<PageDetails>(PageDetails.MainPage,
+            builder.Configuration.GetSection(PageDetails.MainPage));
 
-        builder.Services.Configure<PageTitles>(PageTitles.ApplicationFeaturesLoose,
-            builder.Configuration.GetSection(PageTitles.ApplicationFeaturesLoose));
+        builder.Services.Configure<PageDetails>(PageDetails.ApplicationFeaturesLoose,
+            builder.Configuration.GetSection(PageDetails.ApplicationFeaturesLoose));
 
-        builder.Services.Configure<PageTitles>(PageTitles.ApplicationFeaturesStrong,
-            builder.Configuration.GetSection(PageTitles.ApplicationFeaturesStrong));
+        builder.Services.Configure<PageDetails>(PageDetails.ApplicationFeaturesStrong,
+            builder.Configuration.GetSection(PageDetails.ApplicationFeaturesStrong));
 
-        builder.Services.Configure<PageTitles>(PageTitles.Monitor,
-            builder.Configuration.GetSection(PageTitles.Monitor));
+        builder.Services.Configure<PageDetails>(PageDetails.Monitor,
+            builder.Configuration.GetSection(PageDetails.Monitor));
 
     }
 }
