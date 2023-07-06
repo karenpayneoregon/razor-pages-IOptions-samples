@@ -13,12 +13,22 @@ namespace WebApplication1.Pages;
 /// </summary>
 public class IndexModel : PageModel
 {
+    [ViewData]
+    public string Title { get; set; }
+
     [BindProperty]
     public bool UseAdal { get; set; }
+
     private readonly AzureSettings _azureSettings;
-    public IndexModel(IOptions<AzureSettings> azureSettings)
+
+    private readonly PageTitles _title;
+
+    public IndexModel(IOptions<AzureSettings> azureSettings, IOptionsSnapshot<PageTitles> pageTitle)
     {
         _azureSettings = azureSettings.Value;
+
+        _title = pageTitle.Get(PageTitles.MainPage);
+        Title = _title.Title;
     }
 
     public void OnGet()

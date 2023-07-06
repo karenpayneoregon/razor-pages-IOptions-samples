@@ -1,7 +1,10 @@
 ﻿@page
 @model IndexModel
 @{
-    ViewData["Title"] = "Home page";
+
+}
+@{
+    await Html.RenderPartialAsync("TopMessagePartial");
 }
 
 UseAdal: @ViewData["UseAdal"]

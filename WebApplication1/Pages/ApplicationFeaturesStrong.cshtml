@@ -2,3 +2,9 @@
 @model WebApplication1.Pages.ApplicationFeaturesStrongModel
 @{
 }
+
+@{
+    await Html.RenderPartialAsync("TopMessagePartial");
+}
+
+Connection string: @Model.ConnectionString

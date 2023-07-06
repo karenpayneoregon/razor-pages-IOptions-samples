@@ -9,10 +9,22 @@ namespace WebApplication1.Pages;
 
 public class ApplicationFeaturesStrongModel : PageModel
 {
+
+    [ViewData]
+    public string Title { get; set; }
+
+    private readonly PageTitles _title;
+
+    [BindProperty]
+    public string ConnectionString { get; set; }
     private readonly ApplicationFeatures _features;
-    public ApplicationFeaturesStrongModel(IOptionsSnapshot<ApplicationFeatures> applicationFeatures)
+    public ApplicationFeaturesStrongModel(IOptionsSnapshot<ApplicationFeatures> applicationFeatures, IOptionsSnapshot<PageTitles> pageTitle)
     {
         _features = applicationFeatures.Value;
+        ConnectionString = _features.ConnectionString;
+
+        _title = pageTitle.Get(PageTitles.ApplicationFeaturesStrong);
+        Title = _title.Title;
     }
     public void OnGet()
     {

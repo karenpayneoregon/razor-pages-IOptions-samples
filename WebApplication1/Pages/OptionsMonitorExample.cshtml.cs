@@ -4,19 +4,39 @@ using Microsoft.Extensions.Options;
 using Serilog;
 using WebApplication1.Classes;
 using WebApplication1.Models;
+#pragma warning disable CS8618
 
 namespace WebApplication1.Pages
 {
     public class OptionsMonitorExampleModel : PageModel
     {
+
+        [ViewData]
+        public string Title { get; set; }
+
         [BindProperty]
         public bool UseAdal { get; set; }
         private readonly IOptionsMonitor<AzureSettings> _azureSettings;
+        
+        private readonly AzureSettings _azureSettingsIOptionsMonitor;
 
-        public OptionsMonitorExampleModel(IOptionsMonitor<AzureSettings> azureSettings)
+        private readonly PageTitles _title;
+
+        public OptionsMonitorExampleModel(IOptionsMonitor<AzureSettings> azureSettings, IOptionsSnapshot<PageTitles> pageTitle)
         {
             _azureSettings = azureSettings;
+            _azureSettingsIOptionsMonitor = _azureSettings.CurrentValue;
+            azureSettings.OnChange(_ => OnAzureSettingsValueChange());
+
+            _title = pageTitle.Get(PageTitles.Monitor);
+            Title = _title.Title;
         }
+
+        private void OnAzureSettingsValueChange()
+        {
+            Log.Information("Something changed");
+        }
+
         public void OnGet()
         {
             

@@ -1,3 +1,5 @@
+using Microsoft.AspNetCore.Components.Web;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Options;
 using Serilog;
@@ -7,12 +9,22 @@ namespace WebApplication1.Pages;
 
 public class NamedOptionsModel : PageModel
 {
+    [ViewData]
+    public string Title { get; set; }
+
     private readonly TopItemSettings _monthTopItem;
     private readonly TopItemSettings _yearTopItem;
-    public NamedOptionsModel(IOptionsSnapshot<TopItemSettings> topItemSettings)
+
+    private readonly PageTitles _title;
+
+    public NamedOptionsModel(IOptionsSnapshot<TopItemSettings> topItemSettings, IOptionsSnapshot<PageTitles> pageTitle)
     {
         _monthTopItem = topItemSettings.Get(TopItemSettings.Month);
         _yearTopItem = topItemSettings.Get(TopItemSettings.Year);
+        _title = pageTitle.Get(PageTitles.NamedOptions);
+
+        Title = _title.Title;
+
     }
     public void OnGet()
     {

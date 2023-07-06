@@ -6,6 +6,9 @@ namespace WebApplication1.Classes;
 
 public class SetupLogging
 {
+    /// <summary>
+    /// Configure SeriLog
+    /// </summary>
     public static void Development()
     {
 

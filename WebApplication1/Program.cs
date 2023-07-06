@@ -14,14 +14,8 @@ public class Program
 
         SetupLogging.Development();
 
-        builder.Services.Configure<ApplicationFeatures>(
-            builder.Configuration.GetSection(ApplicationFeatures.Settings));
-
-        builder.Services.Configure<TopItemSettings>(TopItemSettings.Month,
-            builder.Configuration.GetSection(TopItemSettings.Month));
-
-        builder.Services.Configure<TopItemSettings>(TopItemSettings.Year,
-            builder.Configuration.GetSection(TopItemSettings.Year));
+        MainConfigurations(builder);
+        ConfigurePageTitles(builder);
 
 
         builder.Services.Configure<AzureSettings>(
@@ -49,5 +43,36 @@ public class Program
         app.MapRazorPages();
 
         app.Run();
+    }
+
+    private static void MainConfigurations(WebApplicationBuilder builder)
+    {
+        builder.Services.Configure<ApplicationFeatures>(
+            builder.Configuration.GetSection(ApplicationFeatures.Settings));
+
+        builder.Services.Configure<TopItemSettings>(TopItemSettings.Month,
+            builder.Configuration.GetSection(TopItemSettings.Month));
+
+        builder.Services.Configure<TopItemSettings>(TopItemSettings.Year,
+            builder.Configuration.GetSection(TopItemSettings.Year));
+    }
+
+    private static void ConfigurePageTitles(WebApplicationBuilder builder)
+    {
+        builder.Services.Configure<PageTitles>(PageTitles.NamedOptions,
+            builder.Configuration.GetSection(PageTitles.NamedOptions));
+
+        builder.Services.Configure<PageTitles>(PageTitles.MainPage,
+            builder.Configuration.GetSection(PageTitles.MainPage));
+
+        builder.Services.Configure<PageTitles>(PageTitles.ApplicationFeaturesLoose,
+            builder.Configuration.GetSection(PageTitles.ApplicationFeaturesLoose));
+
+        builder.Services.Configure<PageTitles>(PageTitles.ApplicationFeaturesStrong,
+            builder.Configuration.GetSection(PageTitles.ApplicationFeaturesStrong));
+
+        builder.Services.Configure<PageTitles>(PageTitles.Monitor,
+            builder.Configuration.GetSection(PageTitles.Monitor));
+
     }
 }
