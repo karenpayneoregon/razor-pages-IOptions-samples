@@ -12,18 +12,21 @@ public class NamedOptionsModel : PageModel
     [ViewData]
     public string Title { get; set; }
 
+    public string Subject { get; set; }
+
     private readonly TopItemSettings _monthTopItem;
     private readonly TopItemSettings _yearTopItem;
 
-    private readonly PageDetails _title;
+    private readonly PageDetails _pageDetails;
 
     public NamedOptionsModel(IOptionsSnapshot<TopItemSettings> topItemSettings, IOptionsSnapshot<PageDetails> pageTitle)
     {
         _monthTopItem = topItemSettings.Get(TopItemSettings.Month);
         _yearTopItem = topItemSettings.Get(TopItemSettings.Year);
-        _title = pageTitle.Get(PageDetails.NamedOptions);
+        _pageDetails = pageTitle.Get(PageDetails.NamedOptions);
 
-        Title = _title.Title;
+        Title = _pageDetails.Title;
+        Subject = _pageDetails.Subject;
 
     }
     public void OnGet()

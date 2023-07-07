@@ -16,19 +16,22 @@ public class IndexModel : PageModel
     [ViewData]
     public string Title { get; set; }
 
+    public string Subject { get; set; }
+
     [BindProperty]
     public bool UseAdal { get; set; }
 
     private readonly AzureSettings _azureSettings;
 
-    private readonly PageDetails _title;
+    private readonly PageDetails _pageDetails;
 
-    public IndexModel(IOptions<AzureSettings> azureSettings, IOptionsSnapshot<PageDetails> pageTitle)
+    public IndexModel(IOptions<AzureSettings> azureSettings, IOptionsSnapshot<PageDetails> pageDetails)
     {
         _azureSettings = azureSettings.Value;
 
-        _title = pageTitle.Get(PageDetails.MainPage);
-        Title = _title.Title;
+        _pageDetails = pageDetails.Get(PageDetails.MainPage);
+        Title = _pageDetails.Title;
+        Subject = _pageDetails.Subject;
     }
 
     public void OnGet()

@@ -14,13 +14,15 @@ namespace WebApplication1.Pages
         [ViewData]
         public string Title { get; set; }
 
+        public string Subject { get; set; }
+
         [BindProperty]
         public bool UseAdal { get; set; }
         private readonly IOptionsMonitor<AzureSettings> _azureSettings;
         
         private readonly AzureSettings _azureSettingsIOptionsMonitor;
 
-        private readonly PageDetails _title;
+        private readonly PageDetails _pageDetails;
 
         public OptionsMonitorExampleModel(IOptionsMonitor<AzureSettings> azureSettings, IOptionsSnapshot<PageDetails> pageTitle)
         {
@@ -28,8 +30,9 @@ namespace WebApplication1.Pages
             _azureSettingsIOptionsMonitor = _azureSettings.CurrentValue;
             azureSettings.OnChange(_ => OnAzureSettingsValueChange());
 
-            _title = pageTitle.Get(PageDetails.Monitor);
-            Title = _title.Title;
+            _pageDetails = pageTitle.Get(PageDetails.Monitor);
+            Title = _pageDetails.Title;
+            Subject = _pageDetails.Subject;
         }
 
         private void OnAzureSettingsValueChange()

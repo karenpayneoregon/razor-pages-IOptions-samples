@@ -7,4 +7,6 @@
     await Html.RenderPartialAsync("TopMessagePartial");
 }
 
-Connection string: @Model.ConnectionString
+
+<div class="text-primary">Connection string <span class="fw-bold text-black">@Model.ConnectionString</span></div>
+<div class="text-primary">Subject: <span class="fw-bold text-black">@Model.Subject</span></div>

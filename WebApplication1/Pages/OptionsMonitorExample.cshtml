@@ -6,4 +6,6 @@
 @{
     await Html.RenderPartialAsync("TopMessagePartial");
 }
-UseAdal: @ViewData["UseAdal"]
+
+<div class="text-primary">UseAdal: <span class="fw-bold text-black">@ViewData["UseAdal"]</span></div>
+<div class="text-primary ms-1">Subject: <span class="fw-bold text-black">@Model.Subject</span></div>

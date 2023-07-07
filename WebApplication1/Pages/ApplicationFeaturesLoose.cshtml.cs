@@ -12,18 +12,21 @@ public class ApplicationFeaturesLooseModel : PageModel
     [ViewData]
     public string Title { get; set; }
 
+    public string Subject { get; set; }
+
     private readonly IConfiguration _configuration;
     private ApplicationFeatures _features = new();
 
-    private readonly PageDetails _title;
+    private readonly PageDetails _pageDetails;
 
-    public ApplicationFeaturesLooseModel(IConfiguration configuration, IOptionsSnapshot<PageDetails> pageTitle)
+    public ApplicationFeaturesLooseModel(IConfiguration configuration, IOptionsSnapshot<PageDetails> pageDetails)
     {
         _configuration = configuration;
         _configuration.Bind("ApplicationFeatures:IndexPage", _features);
 
-        _title = pageTitle.Get(PageDetails.ApplicationFeaturesLoose);
-        Title = _title.Title;
+        _pageDetails = pageDetails.Get(PageDetails.ApplicationFeaturesLoose);
+        Title = _pageDetails.Title;
+        Subject = _pageDetails.Subject;
     }
     public void OnGet()
     {
