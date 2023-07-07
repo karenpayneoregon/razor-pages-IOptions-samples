@@ -1,5 +1,5 @@
 ﻿#pragma warning disable CS8618
-namespace WebApplication1.Models;
+namespace VariousMethodsApplication.Models;
 
 public class PageDetails
 {

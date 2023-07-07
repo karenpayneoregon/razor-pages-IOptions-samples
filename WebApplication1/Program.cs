@@ -1,7 +1,7 @@
-using WebApplication1.Classes;
-using WebApplication1.Models;
+using VariousMethodsApplication.Classes;
+using VariousMethodsApplication.Models;
 
-namespace WebApplication1;
+namespace VariousMethodsApplication;
 
 public class Program
 {

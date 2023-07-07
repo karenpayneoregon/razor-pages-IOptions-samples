@@ -1,4 +1,4 @@
-﻿namespace WebApplication1.Models;
+﻿namespace VariousMethodsApplication.Models;
 
 #pragma warning disable CS8618
 public class ApplicationOptions

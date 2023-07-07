@@ -1,4 +1,4 @@
-﻿namespace WebApplication1.Classes;
+﻿namespace VariousMethodsApplication.Classes;
 
 public static class BoolExtensions
 {

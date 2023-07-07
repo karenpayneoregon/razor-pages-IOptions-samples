@@ -1,11 +1,10 @@
-using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Options;
 using Serilog;
-using WebApplication1.Models;
+using VariousMethodsApplication.Models;
 
-namespace WebApplication1.Pages;
+namespace VariousMethodsApplication.Pages;
 
 public class NamedOptionsModel : PageModel
 {

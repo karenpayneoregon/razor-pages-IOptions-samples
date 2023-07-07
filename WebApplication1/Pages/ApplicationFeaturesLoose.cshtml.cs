@@ -2,10 +2,10 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Options;
 using Serilog;
-using WebApplication1.Classes;
-using WebApplication1.Models;
+using VariousMethodsApplication.Classes;
+using VariousMethodsApplication.Models;
 
-namespace WebApplication1.Pages;
+namespace VariousMethodsApplication.Pages;
 
 public class ApplicationFeaturesLooseModel : PageModel
 {

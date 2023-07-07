@@ -1,4 +1,4 @@
-﻿namespace WebApplication1.Models;
+﻿namespace VariousMethodsApplication.Models;
 
 public class AzureSettings
 {

@@ -1,7 +1,7 @@
 ﻿using Serilog;
 using SeriLogThemesLibrary;
 
-namespace WebApplication1.Classes;
+namespace VariousMethodsApplication.Classes;
 
 
 public class SetupLogging

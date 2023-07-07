@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Options;
-using System.Runtime.Intrinsics.Arm;
 using ReadListApplication.Models;
 using Microsoft.AspNetCore.Mvc.Rendering;
 

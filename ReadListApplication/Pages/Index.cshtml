@@ -7,13 +7,22 @@
 <div class="container">
     <h1 class="fs-6 mb-4">Reading list from settings</h1>
     <form id="main" method="post">
+        <div class="row">
+            <div class="col">
+                <select name="Id"
+                        asp-for="SelectedCategory"
+                        class="form-select"
+                        asp-items="Model.Options">
+                </select>
+            </div>
+            <div class="col-6">
+                <input type="submit" 
+                       value="Save" 
+                       class="btn btn-primary"/>
+            </div>
+        </div>
 
-        <select name="Id"
-                asp-for="SelectedCategory"
-                class="form-select w-25"
-                asp-items="Model.Options">
-        </select>
-        <input type="submit" value="Save" class="btn btn-primary mt-2"/>
+
     </form>
 </div>
 
