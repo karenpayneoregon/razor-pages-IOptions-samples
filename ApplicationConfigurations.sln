@@ -14,6 +14,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp2", "ConsoleApp2\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControlLoggingApplication", "ControlLoggingApplication\ControlLoggingApplication.csproj", "{9AFA903C-4FA5-4DE2-BAE2-77C0E741FDFD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAnnotatedValidationApplication", "DataAnnotatedValidationApplication\DataAnnotatedValidationApplication.csproj", "{D9FC1D37-4DA5-4CE5-BBFA-3F4549F98B9C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -32,6 +34,10 @@ Global
 		{9AFA903C-4FA5-4DE2-BAE2-77C0E741FDFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9AFA903C-4FA5-4DE2-BAE2-77C0E741FDFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9AFA903C-4FA5-4DE2-BAE2-77C0E741FDFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9FC1D37-4DA5-4CE5-BBFA-3F4549F98B9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9FC1D37-4DA5-4CE5-BBFA-3F4549F98B9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9FC1D37-4DA5-4CE5-BBFA-3F4549F98B9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9FC1D37-4DA5-4CE5-BBFA-3F4549F98B9C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
