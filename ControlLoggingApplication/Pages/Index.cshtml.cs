@@ -1,5 +1,4 @@
-﻿using ControlLoggingApplication.Classes;
-using ControlLoggingApplication.Models;
+﻿using ControlLoggingApplication.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Options;

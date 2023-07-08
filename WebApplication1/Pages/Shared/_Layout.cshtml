@@ -1,9 +1,13 @@
-﻿<!DOCTYPE html>
+﻿
+@using Microsoft.Extensions.Configuration
+@inject IConfiguration Configuration
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - WebApplication1</title>
+    <title>@ViewData["Title"] - @Configuration.GetSection("Layout")["Title"]</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/VariousMethodsApplication.styles.css" asp-append-version="true" />
@@ -12,30 +16,52 @@
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container">
+                
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
+
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
+                            <a class="nav-link text-dark"
+                               asp-area=""
+                               asp-page="/Index">
+                                @Configuration.GetSection("Layout")["Index"]
+                            </a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/ApplicationFeaturesLoose">Loose binding</a>
-                        </li>
-                        
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/ApplicationFeaturesStrong">Strong binding</a>
+                            <a class="nav-link text-dark"
+                               asp-area=""
+                               asp-page="/ApplicationFeaturesLoose">
+                                @Configuration.GetSection("Layout")["ApplicationFeaturesLoose"]
+                            </a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/NamedOptions">Named options</a>
+                            <a class="nav-link text-dark"
+                               asp-area=""
+                               asp-page="/ApplicationFeaturesStrong">
+                                @Configuration.GetSection("Layout")["ApplicationFeaturesStrong"]
+                            </a>
                         </li>
-                        
+
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/OptionsMonitorExample">OptionsMonitor</a>
+                            <a class="nav-link text-dark"
+                               asp-area=""
+                               asp-page="/NamedOptions">
+                                @Configuration.GetSection("Layout")["NamedOptions"]
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link text-dark"
+                               asp-area=""
+                               asp-page="/OptionsMonitorExample">
+                                @Configuration.GetSection("Layout")["OptionsMonitorExample"]
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -50,7 +76,7 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            Code sample
+            @Configuration.GetSection("Layout")["Footer"]
         </div>
     </footer>
 

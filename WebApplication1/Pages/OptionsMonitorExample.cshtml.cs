@@ -25,13 +25,13 @@ namespace VariousMethodsApplication.Pages
 
         private readonly PageDetails _pageDetails;
 
-        public OptionsMonitorExampleModel(IOptionsMonitor<AzureSettings> azureSettings, IOptionsSnapshot<PageDetails> pageTitle)
+        public OptionsMonitorExampleModel(IOptionsMonitor<AzureSettings> azureSettings, IOptionsSnapshot<PageDetails> pageDetails)
         {
             _azureSettings = azureSettings;
             _azureSettingsIOptionsMonitor = _azureSettings.CurrentValue;
             azureSettings.OnChange(_ => OnAzureSettingsValueChange());
 
-            _pageDetails = pageTitle.Get(PageDetails.Monitor);
+            _pageDetails = pageDetails.Get(PageDetails.Monitor);
             Title = _pageDetails.Title;
             Subject = _pageDetails.Subject;
         }
