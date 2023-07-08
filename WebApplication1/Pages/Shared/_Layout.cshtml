@@ -1,5 +1,4 @@
-﻿
-@using Microsoft.Extensions.Configuration
+﻿@using Microsoft.Extensions.Configuration
 @inject IConfiguration Configuration
 
 <!DOCTYPE html>
@@ -16,7 +15,7 @@
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container">
-                
+
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -61,6 +60,14 @@
                                asp-area=""
                                asp-page="/OptionsMonitorExample">
                                 @Configuration.GetSection("Layout")["OptionsMonitorExample"]
+                            </a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link text-dark"
+                               asp-area=""
+                               asp-page="/GetSectionExample">
+                                @Configuration.GetSection("Layout")["GetSectionExample"]
                             </a>
                         </li>
                     </ul>

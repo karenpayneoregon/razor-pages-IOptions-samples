@@ -1,6 +1,7 @@
 ﻿using ControlLoggingApplication.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Options;
 using Serilog;
 
@@ -16,6 +17,7 @@ public class IndexModel : PageModel
     {
         _features = features.Get(ApplicationFeatures.Index);
         Title = _features.Title;
+        
     }
 
     public void OnGet()

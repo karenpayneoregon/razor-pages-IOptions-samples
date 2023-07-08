@@ -1,0 +1,28 @@
+﻿@page
+@model VariousMethodsApplication.Pages.GetSectionExampleModel
+@{
+}
+
+<h1 class="fs-6">Page details</h1>
+
+<div class="border p-2">
+    @{
+
+
+        foreach (var container in @Model.PageDetailsList)
+        {
+
+            <div class="row">
+                <div class="col-3 fw-bold">@container.Path</div>
+            </div>
+            <div class="row">
+                <div class="col-3 ms-5">
+                    <span class="text-primary">Title</span> @container.Details.Title
+                </div>
+                <div class="col-5">
+                    <span class="text-primary">Subject</span> @container.Details.Subject
+                </div>
+            </div>
+        }
+    }
+</div>
