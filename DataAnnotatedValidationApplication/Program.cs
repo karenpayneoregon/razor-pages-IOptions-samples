@@ -8,14 +8,10 @@ public class Program
     {
         var builder = WebApplication.CreateBuilder(args);
 
-        builder.Services.AddOptions<AzureSettings>()
-            .BindConfiguration(nameof(AzureSettings))
-            .ValidateDataAnnotations()
-            .Validate(audience 
-                => !string.IsNullOrWhiteSpace(audience.Audience), "Audience is required")
-            .Validate(audience 
-                => audience.UseAdal == false, "UseAdal must be false")
-            .ValidateOnStart();
+        /*
+         * Validate  AzureSettings model data in appsettings.json
+         */
+        ValidateAzureSettings(builder);
 
         // Add services to the container.
         builder.Services.AddRazorPages();
@@ -40,5 +36,23 @@ public class Program
         app.MapRazorPages();
 
         app.Run();
+    }
+
+    /// <summary>
+    /// Validate using Data Annotations
+    /// Only two properties are annotated, in a real app all properties that are
+    /// required would be validated.
+    /// </summary>
+    /// <param name="builder"></param>
+    private static void ValidateAzureSettings(WebApplicationBuilder builder)
+    {
+        builder.Services.AddOptions<AzureSettings>()
+            .BindConfiguration(nameof(AzureSettings))
+            .ValidateDataAnnotations()
+            .Validate(audience
+                => !string.IsNullOrWhiteSpace(audience.Audience), "Audience is required")
+            .Validate(audience
+                => audience.UseAdal == false, "UseAdal must be false")
+            .ValidateOnStart();
     }
 }

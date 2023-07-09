@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+#pragma warning disable CS8618
 
 namespace DataAnnotatedValidationApplication.Models;
 
