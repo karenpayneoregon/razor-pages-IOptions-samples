@@ -8,10 +8,10 @@ All projects are Razor Pages except one console project. The majority of work is
 
 - `VariousMethodsApplication` smorgasbord of code samples for obtaining information from appsettings.json
 - `ConnectionStringApplication` is a simple example to get a connection string from appsettings.json for EF Core.
-- `ControlLoggingApplication`
-- `DataAnnotatedValidationApplication`
-- `ReadListApplication`
-- `ReadSettingsConsoleApplication`
+- `ControlLoggingApplication` Example to toggle SeriLog on/off via appsettings.json
+- `DataAnnotatedValidationApplication` shows how to validate values in appsettings.json using Data Annotations validation in Program.cs
+- `ReadListApplication` example for reading an array/list
+- `ReadSettingsConsoleApplication` sinple console project for showing reading settings from appsettings.json
 
 ## Requires
 
