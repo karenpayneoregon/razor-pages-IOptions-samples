@@ -2,8 +2,6 @@
 
 Learn how to fetch properties or values from **appsettings.json** in **.NET Core** Razor Pages and console projects, using both IConfiguration and Options Patterns.
 
-Code samples for reading from appsettings.json and is at this time a work in progress, all code works but lacking documentation at this time.
-
 All projects are Razor Pages except one console project. The majority of work is done with dependency injection.
 
 > **Warning**
