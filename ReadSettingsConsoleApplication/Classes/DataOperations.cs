@@ -18,7 +18,7 @@ public class DataOperations
     /// Display connection string. In a real application we do something
     /// like read data from a database
     /// </summary>
-    public async Task ReadConnectionStringFromAppSettings()
+    public async Task ReadConnectionString()
     {
         _logger.LogInformation("Getting connection string\n");
         AnsiConsole.MarkupLine($"[yellow]Connection string[/] [cyan]{_options.DefaultConnection}[/]");

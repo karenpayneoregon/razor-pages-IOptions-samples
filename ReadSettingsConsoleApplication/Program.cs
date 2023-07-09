@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
 using ReadSettingsConsoleApplication.Classes;
 
 namespace ReadSettingsConsoleApplication;
@@ -10,7 +11,9 @@ internal partial class Program
         
         var services = Utilities.ConfigureServices();
         await using var serviceProvider = services.BuildServiceProvider();
-        await serviceProvider.GetService<DataOperations>()!.ReadConnectionStringFromAppSettings();
+        
+        await serviceProvider.GetService<DataOperations>()!.ReadConnectionString();
+        await serviceProvider.GetService<CategoryOperations>()!.ReadCategories();
         ExitPrompt();
     }
 }

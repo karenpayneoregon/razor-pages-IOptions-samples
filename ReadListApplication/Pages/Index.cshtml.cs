@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Options;
 using ReadListApplication.Models;
 using Microsoft.AspNetCore.Mvc.Rendering;
+#pragma warning disable CS8618
 
 namespace ReadListApplication.Pages;
 public class IndexModel : PageModel

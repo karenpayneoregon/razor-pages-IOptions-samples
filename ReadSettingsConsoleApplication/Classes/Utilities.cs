@@ -31,7 +31,11 @@ namespace ReadSettingsConsoleApplication.Classes
                 services.Configure<ConnectionStrings>(ConfigurationRoot()
                     .GetSection(nameof(ConnectionStrings)));
 
+                services.Configure<Category>(ConfigurationRoot()
+                    .GetSection(nameof(Category)));
+
                 services.AddTransient<DataOperations>();
+                services.AddTransient<CategoryOperations>();
             }
 
             var services = new ServiceCollection();
