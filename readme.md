@@ -2,7 +2,16 @@
 
 Code samples for reading from appsettings.json and is at this time a work in progress, all code works but lacking documentation at this time.
 
-All projects are Razor Pages.
+All projects are Razor Pages except one console project. The majority of work is done with dependency injection.
+
+## Projects
+
+- `VariousMethodsApplication` smorgasbord of code samples for obtaining information from appsettings.json
+- `ConnectionStringApplication` is a simple example to get a connection string from appsettings.json for EF Core.
+- `ControlLoggingApplication`
+- `DataAnnotatedValidationApplication`
+- `ReadListApplication`
+- `ReadSettingsConsoleApplication`
 
 ## Requires
 
