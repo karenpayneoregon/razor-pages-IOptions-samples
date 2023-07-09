@@ -5,7 +5,18 @@
 }
 
 <div class="alert alert-primary shadow mt-2" role="alert">
-    <h1 class="fs-6 text-center">Connection string example: Customer count @Model.Count</h1>
+
+    <h1 class="fs-6 text-center">Connection string example </h1>
+
+    <div class="row">
+        <div class="col-1 fw-bold text-end">EF Core</div> Customer count @Model.EntityCount
+    </div>
+
+    <div class="row">
+        <div class="col-1 fw-bold text-end">Provider</div>
+        Customer count @Model.ProviderCount
+    </div>
+
 </div>
 
 <div class="container">
