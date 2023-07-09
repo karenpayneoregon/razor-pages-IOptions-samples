@@ -38,8 +38,8 @@ Take time to review these projects, more likely than not there will be a solutio
 
 - `VariousMethodsApplication` smorgasbord of code samples for obtaining information from appsettings.json
     - **Index page**: demonstrates how to read nested sections using `IOptions` and `IOptionsSnapshot`
-    - **ApplicationFeaturesLoose page **: demonstrates [IConfiguration.Bind](https://learn.microsoft.com/en-us/dotnet/api/microsoft.extensions.configuration.configurationbinder.bind?view=dotnet-plat-ext-7.0) while in `ApplicationFeaturesStrong` the same section is accessed using `IOptionsSnapshot` which is a better option if the application needs to get fresh values if the appsetting.json file changes.
-    - **GetSectionExample page **: provides sample code to read a section in appsettings.json
+    - **ApplicationFeaturesLoose page**: demonstrates [IConfiguration.Bind](https://learn.microsoft.com/en-us/dotnet/api/microsoft.extensions.configuration.configurationbinder.bind?view=dotnet-plat-ext-7.0) while in `ApplicationFeaturesStrong` the same section is accessed using `IOptionsSnapshot` which is a better option if the application needs to get fresh values if the appsetting.json file changes.
+    - **GetSectionExample page**: provides sample code to read a section in appsettings.json
     - **NamedOption page** variations on the Index Page
     - **OptionsMonitorExample page** [IOptionsMonitor](https://learn.microsoft.com/en-us/dotnet/api/microsoft.extensions.options.ioptionsmonitor-1?view=dotnet-plat-ext-7.0) code sample. Note there seems to be issues with the [OnChange](https://learn.microsoft.com/en-us/dotnet/api/microsoft.extensions.options.ioptionsmonitor-1.onchange?view=dotnet-plat-ext-7.0#microsoft-extensions-options-ioptionsmonitor-1-onchange(system-action((-0-system-string)))) event.
 - `ConnectionStringApplication` is a simple example to get a connection string from appsettings.json for EF Core and using a data provider, in this case Microsoft.Data.SqlClient.
