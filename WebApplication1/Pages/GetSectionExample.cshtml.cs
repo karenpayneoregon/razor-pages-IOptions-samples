@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Options;
 using VariousMethodsApplication.Models;
+#pragma warning disable CS8618
 
 namespace VariousMethodsApplication.Pages;
 

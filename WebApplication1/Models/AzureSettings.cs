@@ -1,4 +1,5 @@
-﻿namespace VariousMethodsApplication.Models;
+﻿#pragma warning disable CS8618
+namespace VariousMethodsApplication.Models;
 
 public class AzureSettings
 {

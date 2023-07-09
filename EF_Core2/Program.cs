@@ -22,7 +22,7 @@ public class Program
         builder.Services.AddRazorPages();
         
         builder.Services.AddDbContextPool<Context>(options =>
-            options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
+            options.UseSqlServer(builder.Configuration.GetConnectionString("NorthWindConnection"))
                 .EnableSensitiveDataLogging()
                 .LogTo(new DbContextLogger().Log, (id, _) => id == RelationalEventId.CommandExecuting));
         

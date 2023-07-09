@@ -4,6 +4,15 @@
     ViewData["Title"] = "Home page";
 }
 
-<div class="alert alert-primary" role="alert">
-    Connection string example: See console window
+<div class="alert alert-primary shadow mt-2" role="alert">
+    <h1 class="fs-6 text-center">Connection string example: Customer count @Model.Count</h1>
+</div>
+
+<div class="container">
+    <div class="row">
+        Current appsettings.json
+    </div>
+    <div class="row border border-primary p-2" style="font-size: .75em">
+        <pre>@Html.Raw(@Model.SettingFile)</pre>
+    </div>
 </div>

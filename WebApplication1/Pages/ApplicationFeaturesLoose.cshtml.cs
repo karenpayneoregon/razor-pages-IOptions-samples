@@ -22,6 +22,10 @@ public class ApplicationFeaturesLooseModel : PageModel
     public ApplicationFeaturesLooseModel(IConfiguration configuration, IOptionsSnapshot<PageDetails> pageDetails)
     {
         _configuration = configuration;
+
+        var section = configuration.GetSection("testsection");
+        var sectionExists = section.Exists();
+
         _configuration.Bind("ApplicationFeatures:IndexPage", _features);
 
         _pageDetails = pageDetails.Get(PageDetails.ApplicationFeaturesLoose);
