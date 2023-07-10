@@ -1,21 +1,17 @@
-using EnvironmentApplication.Models;
+using UpdaterApplication.Models;
 
-namespace EnvironmentApplication;
+namespace UpdaterApplication;
 
 public class Program
 {
     public static void Main(string[] args)
     {
-        //var builder = WebApplication.CreateBuilder(args);
-        var builder = WebApplication.CreateBuilder(new WebApplicationOptions
-        {
-            EnvironmentName = Environments.Production // for demo purposes
-        });
+        var builder = WebApplication.CreateBuilder(args);
 
         // Add services to the container.
         builder.Services.AddRazorPages();
 
-        builder.Services.Configure<ApplicationSettings>(builder.Configuration.GetSection(ApplicationSettings.Key));
+        builder.Services.Configure<JobSettings>(builder.Configuration.GetSection("Job"));
 
         var app = builder.Build();
 

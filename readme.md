@@ -50,6 +50,7 @@ Take time to review these projects, more likely than not there will be a solutio
 - `ReadSettingsConsoleApplication` sinple console project for showing reading settings from appsettings.json
 - `SectionExistsApplication` demonstrates how to check if a section exists in appsettings.json
 - `EnvironmentApplication` demonstrates reading a connection string dependent on the current environment.
+- `UpdaterApplication` how to update appsettings.json at runtime
 
 ## Secrets
 
