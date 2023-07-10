@@ -1,0 +1,19 @@
+﻿@page
+@inject IWebHostEnvironment Env
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+
+<div class="mt-2">
+    <dl>
+        <dt>Current environment</dt>
+        <dd>@Env.EnvironmentName</dd>
+        <dt>Connection string</dt>
+        <dd>@Model.ConnectionString</dd>
+    </dl>
+</div>
+
+
+

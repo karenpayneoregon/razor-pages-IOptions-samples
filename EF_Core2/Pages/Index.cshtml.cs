@@ -23,7 +23,6 @@ public class IndexModel : PageModel
     {
         _configuration = configuration;
 
-        var ddddd= _configuration.GetValue<string>("ConnectionStrings:NorthWindConnection");
         _context = context;
 
         SettingFile = """

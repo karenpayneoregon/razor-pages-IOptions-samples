@@ -25,8 +25,11 @@ All projects are Razor Pages except one console project. The majority of work is
 
 Working with [vaults](https://learn.microsoft.com/en-us/aspnet/core/security/key-vault-configuration?view=aspnetcore-7.0) and different environments.
 
+## Enviroments
+
 For working with different environments see [Use multiple environments in ASP.NET Core](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/environments?view=aspnetcore-7.0&source=recommendations) which will assist a developer learning how to work with multiple environments. I see no reason to repeat good documentation.
 
+Also see project EnvironmentApplication
 
 
 ## Projects
@@ -46,6 +49,7 @@ Take time to review these projects, more likely than not there will be a solutio
 - `ReadListApplication` example for reading an array/list
 - `ReadSettingsConsoleApplication` sinple console project for showing reading settings from appsettings.json
 - `SectionExistsApplication` demonstrates how to check if a section exists in appsettings.json
+- `EnvironmentApplication` demonstrates reading a connection string dependent on the current environment.
 
 ## Secrets
 
