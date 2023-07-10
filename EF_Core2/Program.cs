@@ -1,5 +1,5 @@
 using ConnectionStringApplication.Classes;
-using EF_Core2.Data;
+using ConnectionStringApplication.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Diagnostics;
 

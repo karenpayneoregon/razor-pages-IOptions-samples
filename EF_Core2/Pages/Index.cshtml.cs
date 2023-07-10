@@ -1,6 +1,6 @@
 ﻿using System.Data;
-using EF_Core2.Data;
-using EF_Core2.Models;
+using ConnectionStringApplication.Data;
+using ConnectionStringApplication.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Data.SqlClient;
