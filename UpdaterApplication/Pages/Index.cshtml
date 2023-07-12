@@ -3,22 +3,54 @@
 @{
     ViewData["Title"] = "Home page";
 }
+<script src="debugHelper.js"></script>
+<link href="debugger.css"/>
 
 <div class="container">
-    <form method="post" class="w-50">
-        <label asp-for="Title"></label>
-        <input
-            asp-for="Title"
-            class="form-control mb-3 me-4"
-            aria-required="true"/>
-        <label asp-for="Type"></label>
-        <input
-            asp-for="Type"
-            class="form-control mb-3 me-4"
-            aria-required="true"/>
-        
-        <button type="submit" class="btn btn-primary">Submit</button>
 
-    </form>
+    <div class="alert alert-primary" role="alert">
+        <h1 class="fs-6">JobSettings Editor</h1>
+    </div>
+
+    <div class="position-absolute top-50 start-50 translate-middle mt-3">
+
+        <form method="post" class="shadow">
+
+            <fieldset class="border border-dark p-3">
+
+                <legend class="float-none w-auto fs-6">Update properties</legend>
+
+                <label asp-for="Title"></label>
+                <input
+                    asp-for="Title"
+                    class="form-control mb-3 me-4"
+                    aria-required="true"/>
+
+                <label asp-for="Type"></label>
+                <input
+                    asp-for="Type"
+                    class="form-control mb-3 me-4"
+                    aria-required="true"/>
+
+                <button type="submit" class="btn btn-primary">Submit</button>
+
+            </fieldset>
+
+        </form>
+
+    </div>
 
 </div>
+
+<script>
+
+    document.addEventListener('keydown', function (event) {
+
+        if (event.key === '1' && event.altKey) {
+            $debugHelper.toggle();
+        }
+
+    });
+
+
+</script>
