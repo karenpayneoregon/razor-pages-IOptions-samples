@@ -1,26 +1,21 @@
 ﻿using GetWebAddressesApplication.Models;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Options;
+using Serilog;
 
 namespace GetWebAddressesApplication.Pages;
 public class IndexModel : PageModel
 {
-    private readonly ILogger<IndexModel> _logger;
     private readonly IOptionsSnapshot<ApplicationConfigurations> _applicationConfigurations;
 
-    public IndexModel(
-        ILogger<IndexModel> logger, 
-        IOptionsSnapshot<ApplicationConfigurations> applicationConfiguration)
+    public IndexModel(IOptionsSnapshot<ApplicationConfigurations> applicationConfiguration)
     {
-        _logger = logger;
         _applicationConfigurations = applicationConfiguration;
     }
 
     public void OnGet()
     {
-        _logger.LogInformation(
-            $"Host url: {_applicationConfigurations.Value.ApplicationHostUrl}");
-        _logger.LogInformation(
-            $"Rest service: {_applicationConfigurations.Value.RestService}");
+        Log.Information("Host url: {P1}", _applicationConfigurations.Value.ApplicationHostUrl);
+        Log.Information("Rest service: {P1}\n", _applicationConfigurations.Value.RestService);
     }
 }

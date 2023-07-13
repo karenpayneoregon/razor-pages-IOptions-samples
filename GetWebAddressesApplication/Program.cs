@@ -1,3 +1,4 @@
+using GetWebAddressesApplication.Classes;
 using GetWebAddressesApplication.Models;
 
 namespace GetWebAddressesApplication;
@@ -13,6 +14,8 @@ public class Program
 
         builder.Services.Configure<ApplicationConfigurations>(
             builder.Configuration.GetSection(ApplicationConfigurations.Key));
+
+        SetupLogging.Development();
 
         var app = builder.Build();
 
