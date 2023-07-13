@@ -51,6 +51,7 @@ Take time to review these projects, more likely than not there will be a solutio
 - `SectionExistsApplication` demonstrates how to check if a section exists in appsettings.json
 - `EnvironmentApplication` demonstrates reading a connection string dependent on the current environment.
 - `UpdaterApplication` how to update appsettings.json at runtime
+- `GetWebAddressesApplication` the idea is to show a developer might store web addresses for services in appsettings.json
 
 ## Secrets
 
@@ -74,6 +75,7 @@ The major difference is the lifetime of these instances. IOptionsMonitor is regi
 - [Configuration in ASP.NET Core](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/configuration/?view=aspnetcore-7.0&viewFallbackFrom=aspnetcore-2.1)
 - [Options pattern in ASP.NET Core](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/configuration/options?view=aspnetcore-7.0)
 - [Use multiple environments in ASP.NET Core](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/environments?view=aspnetcore-7.0&source=recommendations)
+- [Get started with Razor Pages in ASP.NET Core](https://learn.microsoft.com/en-us/aspnet/core/tutorials/razor-pages/razor-pages-start?view=aspnetcore-7.0&tabs=visual-studio)
 
 
 ## Source code
