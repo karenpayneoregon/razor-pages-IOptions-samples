@@ -34,7 +34,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MiniApplication", "MiniAppl
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DependencyInjectionConsoleApplication", "DependencyInjectionConsoleApplication\DependencyInjectionConsoleApplication.csproj", "{2D640813-C817-4B1B-8D58-92624B7FE1F1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GetWebAddressesApplication", "GetWebAddressesApplication\GetWebAddressesApplication.csproj", "{061FD024-4A11-4FB5-A481-F3D9B4A81BDD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GetWebAddressesApplication", "GetWebAddressesApplication\GetWebAddressesApplication.csproj", "{061FD024-4A11-4FB5-A481-F3D9B4A81BDD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Class projects", "Class projects", "{3E72E452-C60E-4DDF-AF97-302E6701E996}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hybrid.Core", "Hybrid.Core\Hybrid.Core.csproj", "{875CE877-ABC3-440E-90BD-3C8521E61BF0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HybridApplication", "HybridApplication\HybridApplication.csproj", "{440A7C92-4EB4-4955-8593-91585FAA4C93}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -90,6 +96,14 @@ Global
 		{061FD024-4A11-4FB5-A481-F3D9B4A81BDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{061FD024-4A11-4FB5-A481-F3D9B4A81BDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{061FD024-4A11-4FB5-A481-F3D9B4A81BDD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{875CE877-ABC3-440E-90BD-3C8521E61BF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{875CE877-ABC3-440E-90BD-3C8521E61BF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{875CE877-ABC3-440E-90BD-3C8521E61BF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{875CE877-ABC3-440E-90BD-3C8521E61BF0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{440A7C92-4EB4-4955-8593-91585FAA4C93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{440A7C92-4EB4-4955-8593-91585FAA4C93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{440A7C92-4EB4-4955-8593-91585FAA4C93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{440A7C92-4EB4-4955-8593-91585FAA4C93}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -107,6 +121,8 @@ Global
 		{3B00AE43-4FDE-4AD2-8175-AA16C32ABA7F} = {DC29F854-5C2E-42A0-B26C-DD09C303E040}
 		{2D640813-C817-4B1B-8D58-92624B7FE1F1} = {80C9DBF8-EDAA-4468-B19D-E5DC4CBC9386}
 		{061FD024-4A11-4FB5-A481-F3D9B4A81BDD} = {DC29F854-5C2E-42A0-B26C-DD09C303E040}
+		{875CE877-ABC3-440E-90BD-3C8521E61BF0} = {3E72E452-C60E-4DDF-AF97-302E6701E996}
+		{440A7C92-4EB4-4955-8593-91585FAA4C93} = {DC29F854-5C2E-42A0-B26C-DD09C303E040}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6EFB37AF-A28C-4516-A4B0-49E55C9955FC}

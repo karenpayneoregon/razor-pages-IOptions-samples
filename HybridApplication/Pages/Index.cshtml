@@ -1,0 +1,63 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="container">
+    
+    <div class="alert alert-primary mt-3 shadow" role="alert">
+        <h1 class="fs-5">Working with json columns</h1>    
+    </div>
+    @{
+        foreach (var app in Model.ApplicationsList)
+        {
+            <div class="row fw-bold text-primary">@app.ApplicationName</div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Mail setting</th>
+                        <th scope="col">Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Host</td>
+                        <td>@app.MailSettings.Host</td>
+                    </tr>
+                    <tr>
+                        <td>Port</td>
+                        <td>@app.MailSettings.Port</td>
+                    </tr>
+                    <tr>
+                        <td>Time out</td>
+                        <td>@app.MailSettings.TimeOut</td>
+                    </tr>
+                    <tr>
+                        <td>Pickup folder</td>
+                        <td>@app.MailSettings.PickupFolder</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">General settings</th>
+                        <th scope="col">Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>ServicePath</td>
+                        <td>@app.GeneralSettings.ServicePath</td>
+                    </tr>
+                    <tr>
+                        <td>MainDatabaseConnection</td>
+                        <td>@app.GeneralSettings.MainDatabaseConnection</td>
+                    </tr>
+                </tbody>
+            </table>
+        }
+    }
+</div>

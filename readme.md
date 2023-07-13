@@ -1,4 +1,4 @@
-# Storing and reading values from appsettings.json
+# Storing and reading values from appsettings.json code samples
 
 Learn how to fetch properties or values from **appsettings.json** in **.NET Core** Razor Pages and console projects, using both IConfiguration and Options Patterns.
 
