@@ -1,8 +1,7 @@
 ﻿using System.Runtime.CompilerServices;
 using DependencyInjectionConsoleApplication.LanguageExtensions;
 
-// ReSharper disable once CheckNamespace
-namespace DependencyInjectionSimple;
+namespace DependencyInjectionConsoleApplication;
 
 internal partial class Program
 {

@@ -1,5 +1,5 @@
-﻿using DependencyInjectionConsoleApplication.Models;
-using DependencyInjectionSimple.Data;
+﻿using DependencyInjectionConsoleApplication.Data;
+using DependencyInjectionConsoleApplication.Models;
 using Microsoft.Extensions.Configuration;
 
 namespace DependencyInjectionConsoleApplication.Classes

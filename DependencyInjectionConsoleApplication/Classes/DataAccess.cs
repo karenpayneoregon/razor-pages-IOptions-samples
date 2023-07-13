@@ -1,4 +1,4 @@
-﻿using DependencyInjectionSimple.Data;
+﻿using DependencyInjectionConsoleApplication.Data;
 
 namespace DependencyInjectionConsoleApplication.Classes;
 
