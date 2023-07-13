@@ -24,7 +24,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConnectionStringApplication
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SectionExistsApplication", "SectionExistsApplication\SectionExistsApplication.csproj", "{DCE6AFDD-ABA1-4F09-8733-6A78D696E13E}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Consle projects", "Consle projects", "{80C9DBF8-EDAA-4468-B19D-E5DC4CBC9386}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Console projects", "Console projects", "{80C9DBF8-EDAA-4468-B19D-E5DC4CBC9386}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EnvironmentApplication", "EnvironmentApplication\EnvironmentApplication.csproj", "{C06B602C-B689-4F4E-8BC7-559E5650F1C3}"
 EndProject
