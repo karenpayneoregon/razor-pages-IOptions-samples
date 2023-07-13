@@ -7,14 +7,16 @@
 <div class="alert alert-primary shadow mt-2" role="alert">
 
     <h1 class="fs-6 text-center">Connection string example </h1>
-
+    
+    <div class="row fw-bold">Customer count</div>
     <div class="row">
-        <div class="col-1 fw-bold text-end">EF Core</div> Customer count @Model.EntityCount
+        <div class="fw-bold text-end" style="width: 5.5em">EF Core</div>
+        <div class="col-3">@Model.EntityCount</div>
     </div>
 
     <div class="row">
-        <div class="col-1 fw-bold text-end">Provider</div>
-        Customer count @Model.ProviderCount
+        <div class="fw-bold text-end" style="width: 5.5em">Provider</div>
+        <div class="col-4">@Model.ProviderCount</div>
     </div>
 
 </div>
