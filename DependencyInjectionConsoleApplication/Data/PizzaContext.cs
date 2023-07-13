@@ -4,7 +4,7 @@
 #nullable disable
 
 using DependencyInjectionConsoleApplication.Data.Configurations;
-using DependencyInjectionSimple.Models;
+using DependencyInjectionConsoleApplication.Models;
 
 namespace DependencyInjectionConsoleApplication.Data;
 
