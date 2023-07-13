@@ -81,3 +81,7 @@ The major difference is the lifetime of these instances. IOptionsMonitor is regi
 ## Source code
 
 Clone the following [GitHub repository](https://github.com/karenpayneoregon/razor-pages-IOptions-samples).
+
+## Article
+
+https://dev.to/karenpayneoregon/storing-and-reading-values-from-appsettingsjson-io
