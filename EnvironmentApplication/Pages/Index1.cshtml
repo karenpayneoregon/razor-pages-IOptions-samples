@@ -1,0 +1,18 @@
+﻿@page
+@inject Microsoft.Extensions.Options.IOptions<ApplicationSettings> ApplicationSettings
+@inject IWebHostEnvironment Env
+@using EnvironmentApplication.Models
+@model EnvironmentApplication.Pages.Index1Model
+@{
+    var options = ApplicationSettings.Value;
+}
+
+<div class="mt-2">
+    <dl>
+        <dt>Current environment</dt>
+        <dd>@Env.EnvironmentName</dd>
+        <dt>Connection string</dt>
+        <dd>@options.NorthWindConnection</dd>
+    </dl>
+</div>
+

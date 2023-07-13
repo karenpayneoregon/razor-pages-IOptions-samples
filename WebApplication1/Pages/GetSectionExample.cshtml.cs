@@ -15,8 +15,7 @@ public class GetSectionExampleModel : PageModel
 
     [ViewData]
     public string Title { get; set; }
-    public string Subject { get; set; }
-    private readonly PageDetails _pageDetails;
+
 
     public GetSectionExampleModel(IConfiguration configuration, IOptionsSnapshot<PageDetails> pageDetails)
     {
