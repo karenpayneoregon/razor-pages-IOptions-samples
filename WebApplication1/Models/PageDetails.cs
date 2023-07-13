@@ -8,6 +8,7 @@ public class PageDetails
     public const string ApplicationFeaturesStrong = "PageDetails:ApplicationFeaturesStrong";
     public const string NamedOptions = "PageDetails:NamedOptions";
     public const string Monitor = "PageDetails:Monitor";
+
     public string Title { get; set; }
     public string Subject { get; set; }
 }

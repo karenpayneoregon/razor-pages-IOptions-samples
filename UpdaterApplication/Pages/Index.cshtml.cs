@@ -2,7 +2,6 @@
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Options;
 using System.ComponentModel.DataAnnotations;
-using System.Xml.Linq;
 using UpdaterApplication.Models;
 
 namespace UpdaterApplication.Pages;
