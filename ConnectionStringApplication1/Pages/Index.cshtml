@@ -3,16 +3,20 @@
 @{
     ViewData["Title"] = "Home page";
 }
+<div class="alert alert-danger" role="alert">
+    <h1 class="fs-5 text-center">Connection timeout</h1>
+</div>
 
-<div class="content">
+<div class="d-flex align-items-center justify-content-center">
 
-    <form method="post">
 
-        <div class="d-grid gap-2">
+    <form method="post" class="shadow w-50">
 
-            <input type="submit" class="btn btn-primary" value="Execute" asp-page-handler="TestConnection"  />
+        <div class="">
 
-            <div class="alert alert-primary" role="alert">
+            <input type="submit" class="btn btn-danger w-100 mb-2" value="Execute" asp-page-handler="TestConnection"  />
+
+            <div class="alert alert-danger" role="alert">
                 @Html.Raw(Model.Message)
             </div>
 
