@@ -1,0 +1,23 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="content">
+
+    <form method="post">
+
+        <div class="d-grid gap-2">
+
+            <input type="submit" class="btn btn-primary" value="Execute" asp-page-handler="TestConnection"  />
+
+            <div class="alert alert-primary" role="alert">
+                @Html.Raw(Model.Message)
+            </div>
+
+        </div>
+
+    </form>
+
+</div>

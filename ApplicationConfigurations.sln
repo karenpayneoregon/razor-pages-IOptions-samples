@@ -40,7 +40,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Class projects", "Class pro
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hybrid.Core", "Hybrid.Core\Hybrid.Core.csproj", "{875CE877-ABC3-440E-90BD-3C8521E61BF0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HybridApplication", "HybridApplication\HybridApplication.csproj", "{440A7C92-4EB4-4955-8593-91585FAA4C93}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HybridApplication", "HybridApplication\HybridApplication.csproj", "{440A7C92-4EB4-4955-8593-91585FAA4C93}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConnectionStringApplication1", "ConnectionStringApplication1\ConnectionStringApplication1.csproj", "{D3C231AF-3492-4539-A427-73B253562C8E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -104,6 +106,10 @@ Global
 		{440A7C92-4EB4-4955-8593-91585FAA4C93}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{440A7C92-4EB4-4955-8593-91585FAA4C93}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{440A7C92-4EB4-4955-8593-91585FAA4C93}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3C231AF-3492-4539-A427-73B253562C8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3C231AF-3492-4539-A427-73B253562C8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3C231AF-3492-4539-A427-73B253562C8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3C231AF-3492-4539-A427-73B253562C8E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -123,6 +129,7 @@ Global
 		{061FD024-4A11-4FB5-A481-F3D9B4A81BDD} = {DC29F854-5C2E-42A0-B26C-DD09C303E040}
 		{875CE877-ABC3-440E-90BD-3C8521E61BF0} = {3E72E452-C60E-4DDF-AF97-302E6701E996}
 		{440A7C92-4EB4-4955-8593-91585FAA4C93} = {DC29F854-5C2E-42A0-B26C-DD09C303E040}
+		{D3C231AF-3492-4539-A427-73B253562C8E} = {DC29F854-5C2E-42A0-B26C-DD09C303E040}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6EFB37AF-A28C-4516-A4B0-49E55C9955FC}
