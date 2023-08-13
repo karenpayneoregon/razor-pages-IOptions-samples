@@ -42,11 +42,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hybrid.Core", "Hybrid.Core\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HybridApplication", "HybridApplication\HybridApplication.csproj", "{440A7C92-4EB4-4955-8593-91585FAA4C93}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConnectionStringApplication1", "ConnectionStringApplication1\ConnectionStringApplication1.csproj", "{D3C231AF-3492-4539-A427-73B253562C8E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConnectionStringApplication1", "ConnectionStringApplication1\ConnectionStringApplication1.csproj", "{D3C231AF-3492-4539-A427-73B253562C8E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{AC2E34AA-5BCB-42E9-8C01-050E4CFFA246}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{AC2E34AA-5BCB-42E9-8C01-050E4CFFA246}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GetSettingInLayoutApplication", "GetSettingInLayoutApplication\GetSettingInLayoutApplication.csproj", "{1BB04F0E-D783-4761-ADE0-01BD2D2548DA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GetSettingInLayoutApplication", "GetSettingInLayoutApplication\GetSettingInLayoutApplication.csproj", "{1BB04F0E-D783-4761-ADE0-01BD2D2548DA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

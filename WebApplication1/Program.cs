@@ -1,3 +1,4 @@
+using Serilog;
 using VariousMethodsApplication.Classes;
 using VariousMethodsApplication.Models;
 
@@ -24,6 +25,11 @@ public class Program
         builder.Services.Configure<AzureSettings>(builder.Configuration.GetSection(nameof(AzureSettings)));
 
         var app = builder.Build();
+
+        if (app.Configuration is IConfigurationRoot configurationRoot)
+        {
+            Log.Information(configurationRoot.GetDebugView());
+        }
 
         // Configure the HTTP request pipeline.
         if (!app.Environment.IsDevelopment())

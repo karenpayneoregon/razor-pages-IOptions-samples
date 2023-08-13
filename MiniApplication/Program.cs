@@ -1,3 +1,4 @@
+#pragma warning disable CS8604 // Possible null reference argument.
 namespace MiniApplication;
 
 public class Program
@@ -8,7 +9,9 @@ public class Program
         var app = builder.Build();
 
         var connectionString = builder.Configuration.GetConnectionString("NorthWindConnection");
-        app.MapGet("/", () => $"North: {connectionString}");
+        var variables = (app.Configuration as IConfigurationRoot).GetDebugView();
+
+        app.MapGet("/", () => $"North: {connectionString}\n{variables}");
 
         app.Logger.LogInformation($"Connection string: {connectionString}");
 
