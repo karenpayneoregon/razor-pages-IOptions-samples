@@ -10,11 +10,18 @@
 <div class="d-flex align-items-center justify-content-center">
 
 
-    <form method="post" class="shadow w-50">
+    <form id="main" method="post" class="shadow w-75">
 
-        <div class="">
+        <div>
 
-            <input type="submit" class="btn btn-danger w-100 mb-2" value="Execute" asp-page-handler="TestConnection"  />
+            <button id="submitButton" type="submit" class="btn btn-danger w-100 mb-2"  asp-page-handler="TestConnection">
+                Execute
+                <span id="spin" class="spinner-grow spinner-grow-sm d-none" role="status" aria-hidden="true"></span>
+            </button>
+            <div class="form-check ms-1">
+                <input asp-for="UseBadConnection" type="checkbox" class="form-check-input" />
+                <label asp-for="UseBadConnection">Bad connection</label>
+            </div>
 
             <div class="alert alert-danger" role="alert">
                 @Html.Raw(Model.Message)
@@ -25,3 +32,13 @@
     </form>
 
 </div>
+
+<script>
+
+    document.getElementById("submitButton").addEventListener("click",
+        function () {
+            let spinner = document.getElementById('spin');
+            spinner.classList.remove('d-none');
+        });
+</script>
+
