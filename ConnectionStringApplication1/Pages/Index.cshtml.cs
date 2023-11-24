@@ -1,9 +1,13 @@
 ﻿using ConnectionStringApplication1.Classes;
+using Dapper;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Data.SqlClient;
 using Microsoft.Extensions.Options;
 using Serilog;
+using System;
+using ConnectionStringApplication1.Models;
+
 #pragma warning disable CS8618
 
 namespace ConnectionStringApplication1.Pages;
@@ -53,6 +57,19 @@ public class IndexModel : PageModel
         {
             await using var cn = new SqlConnection(connectionString);
             await cn.OpenAsync(ct);
+            var list = cn.Query<Categories>(
+                """
+                SELECT CategoryID,CategoryName
+                FROM dbo.Categories
+                """).ToList();
+
+            Log.Information("--------------------------");
+            foreach (var cat in list)
+            {
+                Log.Information("Id {P1} Name {P2}", cat.CategoryID, cat.CategoryName);
+            }
+            Log.Information("--------------------------\n");
+
             return (true,null)!;
         }
         catch (TaskCanceledException tce)

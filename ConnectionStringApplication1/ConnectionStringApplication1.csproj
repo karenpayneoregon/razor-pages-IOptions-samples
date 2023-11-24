@@ -20,11 +20,16 @@
 
 	<ItemGroup>
 		<PackageReference Include="Microsoft.Data.SqlClient" Version="5.1.2" />
+		<PackageReference Include="Dapper" Version="2.1.15" />
 	</ItemGroup>
 
 	<ItemGroup>
 		<PackageReference Include="SeriLogThemesLibrary" Version="1.0.0.1" />
 		<PackageReference Include="Serilog.AspNetCore" Version="8.0.0" />
 		<PackageReference Include="Serilog.Sinks.Console" Version="5.0.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="Scripts\" />
 	</ItemGroup>
 </Project>
