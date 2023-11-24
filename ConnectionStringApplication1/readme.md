@@ -1,6 +1,11 @@
-﻿# About
+﻿# Connection timeout example
 
-Example for connection time out, in this case because the server does not exists.
+> **Note**
+> 11-2023 Has been update to .NET Core 8
+
+Example for connection time out with `SqlConnection`, in this case because the server does not exists.
+
+All code is in the index page while not correct, should be in a service for data operations.
 
 Usually the default timeout is 30 seconds, here it's 4 seconds.
 

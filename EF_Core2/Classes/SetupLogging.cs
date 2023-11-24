@@ -12,31 +12,6 @@ namespace ConnectionStringApplication.Classes;
 public class SetupLogging
 {
 
-    //public static void Development()
-    //{
-    //    Log.Logger = new LoggerConfiguration()
-    //        .MinimumLevel.Verbose()
-    //        .WriteTo.Console(theme: AnsiConsoleTheme.Code)
-    //        .CreateLogger();
-    //}
-
-    public static void DevelopmentAlternate()
-    {
-        Log.Logger = new LoggerConfiguration()
-            .MinimumLevel.Information()
-            .MinimumLevel.Override("Microsoft", LogEventLevel.Warning)
-            .MinimumLevel.Override("Microsoft.Hosting.Lifetime", LogEventLevel.Information)
-            .WriteTo.Console(theme: AnsiConsoleTheme.Literate)
-            .CreateLogger();
-
-    }
-    /// <summary>
-    /// Staging logging
-    /// </summary>
-    public static void Staging()
-    {
-        // TODO
-    }
 
     /// <summary>
     /// Production logging
