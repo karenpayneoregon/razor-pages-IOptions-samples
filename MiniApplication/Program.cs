@@ -11,6 +11,10 @@ public class Program
         var connectionString = builder.Configuration.GetConnectionString("NorthWindConnection");
         var variables = (app.Configuration as IConfigurationRoot).GetDebugView();
 
+        if (variables.Contains(Environment.NewLine))
+        {
+            var parts = variables.Split(Environment.NewLine);
+        }
         app.MapGet("/", () => $"North: {connectionString}\n{variables}");
 
         app.Logger.LogInformation($"Connection string: {connectionString}");
