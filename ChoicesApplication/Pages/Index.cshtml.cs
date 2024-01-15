@@ -27,5 +27,10 @@ public class IndexModel : PageModel
 
         var title1 = _applicationSettingsStrongTyped.Value.Title;
         var name1 = _applicationSettingsStrongTyped.Value.Name;
+
+        var title2 = _applicationSettingsStrongTyped
+            .Get(ApplicationSettings.Key).Title;
+
+
     }
 }
