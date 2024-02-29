@@ -16,6 +16,10 @@ public class Program
             builder.Configuration
                 .GetSection(ApplicationConfigurations.Key));
 
+        builder.Services.Configure<Youtube>(
+            builder.Configuration
+                .GetSection(Youtube.Location));
+
         SetupLogging.Development();
 
         var app = builder.Build();

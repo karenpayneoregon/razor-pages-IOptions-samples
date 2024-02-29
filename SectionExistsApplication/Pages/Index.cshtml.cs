@@ -25,4 +25,23 @@ public class IndexModel : PageModel
         section = _configuration.GetSection("Azure");
         AzureSectionExists = section.Exists();
     }
+
+    private void ForQuestionOfTheDay()
+    {
+        var section = _configuration.GetSection("Layout");
+
+        var dictionary = section.AsEnumerable()
+            .ToDictionary(x => x.Key, x => x.Value);
+
+        if (dictionary.ContainsKey("Layout:ApplicationFeaturesStrong"))
+        {
+            var item1 = _configuration.GetValue<string>("Layout:ApplicationFeaturesStrong");
+        }
+
+        string? item2 = _configuration.GetValue<string>("Layout:ApplicationFeaturesStrong");
+        if (item2 is not null)
+        {
+            // . . .
+        }
+    }
 }
