@@ -1,4 +1,4 @@
-﻿using System.Data.SqlClient;
+﻿using Microsoft.Data.SqlClient;
 using static ConfigurationLibrary.Classes.ConfigurationHelper;
 
 namespace ConsoleApp1.Classes;
@@ -17,8 +17,8 @@ internal class DataOperations
             WHERE db.database_id > 5
             ORDER BY [Database Name];
             """;
-        using var cn = new SqlConnection(ConnectionString());
-        using var cmd = new SqlCommand(statement, cn);
+        using SqlConnection cn = new(ConnectionString());
+        using SqlCommand cmd = new(statement, cn);
         cn.Open();
         AnsiConsole.MarkupLine("[yellow]Connection open[/]");
         var reader = cmd.ExecuteReader();

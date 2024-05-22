@@ -15,9 +15,9 @@
         {
           "Documents": [
             {
-              "FilePath": "C:\\OED\\DotnetLand\\VS2022\\ApplicationConfigurations\\GetWebAddressesApplication\\GetWebAddressesApplication.csproj",
-              "RelativePath": "..\\..\\GetWebAddressesApplication\\GetWebAddressesApplication.csproj",
-              "FullName": "GetWebAddressesApplication.csproj",
+              "FilePath": "C:\\OED\\DotnetLand\\VS2022\\ApplicationConfigurations\\GetWebAddressesApplication\\Models\\Youtube.cs",
+              "RelativePath": "..\\..\\GetWebAddressesApplication\\Models\\Youtube.cs",
+              "FullName": "Youtube.cs",
               "DockedHeight": {
                 "UnitType": "Stretch",
                 "Value": 162
@@ -26,9 +26,10 @@
                 "UnitType": "Stretch",
                 "Value": 200
               },
-              "Line": 1,
-              "Column": 1,
+              "Line": 10,
+              "Column": 2,
               "IsPinned": false,
+              "IsActive": true,
               "IsSelected": true
             },
             {
@@ -43,8 +44,8 @@
                 "UnitType": "Stretch",
                 "Value": 200
               },
-              "Line": 27,
-              "Column": 61,
+              "Line": 24,
+              "Column": 9,
               "IsPinned": false
             },
             {
@@ -77,22 +78,6 @@
               },
               "Line": 14,
               "Column": 11,
-              "IsPinned": false
-            },
-            {
-              "FilePath": "C:\\OED\\DotnetLand\\VS2022\\ApplicationConfigurations\\GetWebAddressesApplication\\Models\\ApplicationConfigurations.cs",
-              "RelativePath": "..\\..\\GetWebAddressesApplication\\Models\\ApplicationConfigurations.cs",
-              "FullName": "ApplicationConfigurations.cs",
-              "DockedHeight": {
-                "UnitType": "Stretch",
-                "Value": 162
-              },
-              "DockedWidth": {
-                "UnitType": "Stretch",
-                "Value": 200
-              },
-              "Line": 6,
-              "Column": 59,
               "IsPinned": false
             }
           ],
