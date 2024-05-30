@@ -1,0 +1,12 @@
+﻿@page
+@model ReadListApplication.Pages.EmailPageModel
+@{
+
+}
+
+<ol>
+    @foreach (var email in Model.DistributionWhitelists!)
+    {
+        <li>@email</li>
+    }
+</ol>

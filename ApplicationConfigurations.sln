@@ -48,7 +48,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp1", "ConsoleApp1\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GetSettingInLayoutApplication", "GetSettingInLayoutApplication\GetSettingInLayoutApplication.csproj", "{1BB04F0E-D783-4761-ADE0-01BD2D2548DA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChoicesApplication", "ChoicesApplication\ChoicesApplication.csproj", "{58B4D2E5-9D10-400E-8AF2-3B6ABEB86FA2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChoicesApplication", "ChoicesApplication\ChoicesApplication.csproj", "{58B4D2E5-9D10-400E-8AF2-3B6ABEB86FA2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
