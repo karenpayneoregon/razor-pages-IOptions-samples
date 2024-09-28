@@ -50,6 +50,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GetSettingInLayoutApplicati
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChoicesApplication", "ChoicesApplication\ChoicesApplication.csproj", "{58B4D2E5-9D10-400E-8AF2-3B6ABEB86FA2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExcelConnectionApplication", "ExcelConnectionApplication\ExcelConnectionApplication.csproj", "{58222B09-19AB-4FC9-B675-785CB44454FC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -128,6 +130,10 @@ Global
 		{58B4D2E5-9D10-400E-8AF2-3B6ABEB86FA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{58B4D2E5-9D10-400E-8AF2-3B6ABEB86FA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{58B4D2E5-9D10-400E-8AF2-3B6ABEB86FA2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58222B09-19AB-4FC9-B675-785CB44454FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58222B09-19AB-4FC9-B675-785CB44454FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58222B09-19AB-4FC9-B675-785CB44454FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58222B09-19AB-4FC9-B675-785CB44454FC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
