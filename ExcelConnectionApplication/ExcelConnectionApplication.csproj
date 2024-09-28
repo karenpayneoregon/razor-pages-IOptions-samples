@@ -14,17 +14,17 @@
 
 	<ItemGroup>
 		<PackageReference Include="ConfigurationLibrary" Version="1.0.6" />
-		<PackageReference Include="ConsoleConfigurationLibrary" Version="1.0.0.2" />
+		<PackageReference Include="ConsoleConfigurationLibrary" Version="1.0.0.4" />
 	</ItemGroup>
 
 	<ItemGroup>
 		<!-- ReSharper disable once VulnerablePackage -->
-		<PackageReference Include="ExcelMapper" Version="5.2.590" />
+		<PackageReference Include="ExcelMapper" Version="5.2.592" />
 	</ItemGroup>
 
 	<ItemGroup>
 		<PackageReference Include="Dapper" Version="2.1.35" />
-		<PackageReference Include="Microsoft.Data.SqlClient" Version="5.2.1" />
+		<PackageReference Include="Microsoft.Data.SqlClient" Version="5.2.2" />
 	</ItemGroup>
 
 
