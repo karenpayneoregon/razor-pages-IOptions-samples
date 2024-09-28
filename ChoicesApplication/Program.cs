@@ -10,8 +10,12 @@ public class Program
 
         // Add services to the container.
         builder.Services.AddRazorPages();
-        builder.Services.Configure<ApplicationSettings>(builder.Configuration.GetSection(ApplicationSettings.Key));
-        builder.Services.Configure<ApplicationSettings>(ApplicationSettings.Key, builder.Configuration.GetSection(ApplicationSettings.Key));
+
+        builder.Services.Configure<ApplicationSettings>(
+            builder.Configuration.GetSection(ApplicationSettings.Key));
+
+        builder.Services.Configure<ApplicationSettings>(
+            ApplicationSettings.Key, builder.Configuration.GetSection(ApplicationSettings.Key));
 
         var app = builder.Build();
 
