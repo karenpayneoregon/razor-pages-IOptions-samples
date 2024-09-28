@@ -52,6 +52,7 @@ Take time to review these projects, more likely than not there will be a solutio
 - `EnvironmentApplication` demonstrates reading a connection string dependent on the current environment.
 - `UpdaterApplication` how to update appsettings.json at runtime
 - `GetWebAddressesApplication` the idea is to show a developer might store web addresses for services in appsettings.json
+- `ExcelConnectionApplication` demonstrates how to read a connection string for Excel from appsettings.json
 
 ## Secrets
 
@@ -60,7 +61,7 @@ See the following article [ASP.NET Core/Razor pages Secret Manager](https://dev.
 ## Requires
 
 - Microsoft Visual Studio 2022 or higher
-- .NET Core 7
+- .NET Core 8
 
 ## What’s the difference between IOptionsMonitor vs. IOptionsSnapshot?
 The major difference is the lifetime of these instances. IOptionsMonitor is registered as Singleton, whereas the IOptionsSnapshot is registered as Scoped.
