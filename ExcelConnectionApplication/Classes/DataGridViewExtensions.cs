@@ -3,10 +3,10 @@
 public static class DataGridViewExtensions
 {
     /// <summary>
-    /// Expands the columns of the DataGridView.
+    /// Expands the columns of the specified <see cref="DataGridView"/>.
     /// </summary>
-    /// <param name="source">The DataGridView instance.</param>
-    /// <param name="sizable">Determines whether the columns should be sizable.</param>
+    /// <param name="source">The <see cref="DataGridView"/> instance whose columns are to be expanded.</param>
+    /// <param name="sizable">A boolean value indicating whether the columns should be sizable after expansion.</param>
     public static void ExpandColumns(this DataGridView source, bool sizable = false)
     {
         source.FixHeaders();
@@ -31,9 +31,9 @@ public static class DataGridViewExtensions
     }
 
     /// <summary>
-    /// Fixes the headers of the DataGridView columns to split property names.
+    /// Fixes the headers of the <see cref="DataGridView"/> columns by splitting property names into separate words.
     /// </summary>
-    /// <param name="source">The DataGridView instance.</param>
+    /// <param name="source">The <see cref="DataGridView"/> instance whose column headers are to be fixed.</param>
     public static void FixHeaders(this DataGridView source)
     {
         for (var index = 0; index < source.Columns.Count; index++)
