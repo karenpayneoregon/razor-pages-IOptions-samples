@@ -13,7 +13,6 @@ public class AppSettingsUpdater
     private const string EmptyJson = "{}";
     public void UpdateAppSetting(string key, object value)
     {
-        // Empty keys "" are allowed in json by the way
         if (key == null)
         {
             throw new ArgumentException("Json property key cannot be null", nameof(key));
@@ -21,7 +20,6 @@ public class AppSettingsUpdater
 
         const string settingsFileName = "appsettings.json";
 
-        // We will create a new file if appsettings.json doesn't exist or was deleted
         if (!File.Exists(settingsFileName))
         {
             File.WriteAllText(settingsFileName, EmptyJson);
@@ -29,21 +27,32 @@ public class AppSettingsUpdater
 
         var config = File.ReadAllText(settingsFileName);
 
-        var updatedConfigDict = UpdateJson(key, value, config);
+        var updatedConfigDict = UpdateProperty(key, value, config);
         // After receiving the dictionary with updated key value pair, we serialize it back into json.
-        var updatedJson = JsonSerializer.Serialize(updatedConfigDict, new JsonSerializerOptions
-        {
-            WriteIndented = true
-        });
+        var updatedJson = JsonSerializer.Serialize(updatedConfigDict, Options);
 
         File.WriteAllText(settingsFileName, updatedJson);
     }
 
-    // This method will recursively read json segments separated by semicolon (firstObject:nestedObject:someProperty)
-    // until it reaches the desired property that needs to be updated,
-    // it will update the property and return json document represented by dictionary of dictionaries of dictionaries and so on.
-    // This dictionary structure can be easily serialized back into json
-    private Dictionary<string, object> UpdateJson(string key, object value, string jsonSegment)
+    /// <summary>
+    /// Updates a JSON configuration segment by modifying or adding a key-value pair.
+    /// </summary>
+    /// <param name="key">
+    /// The key to be updated or added in the JSON structure. Nested keys can be specified using a colon (:) as a separator.
+    /// </param>
+    /// <param name="value">
+    /// The value to associate with the specified key. This can be any object that is serializable to JSON.
+    /// </param>
+    /// <param name="jsonSegment">
+    /// The JSON string representing the segment of the configuration to be updated.
+    /// </param>
+    /// <returns>
+    /// A dictionary representing the updated JSON structure.
+    /// </returns>
+    /// <exception cref="JsonException">
+    /// Thrown if the provided JSON segment is invalid or cannot be deserialized.
+    /// </exception>
+    private static Dictionary<string, object> UpdateProperty(string key, object value, string jsonSegment)
     {
         const char keySeparator = ':';
 
@@ -61,7 +70,7 @@ public class AppSettingsUpdater
                 ? config[firstKeyPart].ToString()
                 : EmptyJson;
 
-            config[firstKeyPart] = UpdateJson(remainingKey, value, newJsonSegment);
+            config[firstKeyPart] = UpdateProperty(remainingKey, value, newJsonSegment);
 
         }
         else
@@ -71,4 +80,6 @@ public class AppSettingsUpdater
 
         return config;
     }
+
+    public static JsonSerializerOptions Options => new() { WriteIndented = true };
 }

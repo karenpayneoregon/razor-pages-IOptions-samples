@@ -15,6 +15,8 @@ public class IndexModel : PageModel
     public string Type { get; set; }
 
     private readonly IOptionsSnapshot<JobSettings> _jobSettings;
+ 
+
     public IndexModel(IOptionsSnapshot<JobSettings> jobSettings)
     {
 
@@ -22,7 +24,7 @@ public class IndexModel : PageModel
 
         Title = _jobSettings.Value.Title;
         Type = _jobSettings.Value.Type;
-
+        
     }
 
     public void OnPost()
