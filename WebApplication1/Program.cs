@@ -18,7 +18,6 @@ public class Program
         MainConfigurations(builder);
         ConfigurePageTitles(builder);
 
-
         builder.Services.Configure<AzureSettings>(
             builder.Configuration.GetSection(AzureSettings.Settings));
 

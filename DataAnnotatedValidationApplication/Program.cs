@@ -39,11 +39,21 @@ public class Program
     }
 
     /// <summary>
-    /// Validate using Data Annotations
-    /// Only two properties are annotated, in a real app all properties that are
-    /// required would be validated.
+    /// Validates the <see cref="AzureSettings"/> model data from the application configuration
+    /// using data annotations and custom validation rules.
     /// </summary>
-    /// <param name="builder"></param>
+    /// <param name="builder">
+    /// The <see cref="WebApplicationBuilder"/> used to configure the application.
+    /// </param>
+    /// <remarks>
+    /// This method ensures that the <see cref="AzureSettings"/> configuration section is bound,
+    /// validated using data annotations, and adheres to additional custom validation rules:
+    /// <list type="bullet">
+    /// <item><description>The <c>Audience</c> property must not be null, empty, or whitespace.</description></item>
+    /// <item><description>The <c>UseAdal</c> property must be set to <c>false</c>.</description></item>
+    /// </list>
+    /// Validation is performed during application startup.
+    /// </remarks>
     private static void ValidateAzureSettings(WebApplicationBuilder builder)
     {
         builder.Services.AddOptions<AzureSettings>()

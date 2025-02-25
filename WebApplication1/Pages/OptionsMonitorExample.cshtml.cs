@@ -21,24 +21,30 @@ namespace VariousMethodsApplication.Pages
         public bool UseAdal { get; set; }
         private readonly IOptionsMonitor<AzureSettings> _azureSettings;
         
-        private readonly AzureSettings _azureSettingsIOptionsMonitor;
+        private AzureSettings _azureSettingsIOptionsMonitor;
 
         private readonly PageDetails _pageDetails;
 
         public OptionsMonitorExampleModel(IOptionsMonitor<AzureSettings> azureSettings, IOptionsSnapshot<PageDetails> pageDetails)
         {
+
             _azureSettings = azureSettings;
             _azureSettingsIOptionsMonitor = _azureSettings.CurrentValue;
-            azureSettings.OnChange(_ => OnAzureSettingsValueChange());
+            _azureSettings.OnChange(OnAzureSettingsValueChange);
 
             _pageDetails = pageDetails.Get(PageDetails.Monitor);
             Title = _pageDetails.Title;
             Subject = _pageDetails.Subject;
         }
 
-        private void OnAzureSettingsValueChange()
+        private void OnAzureSettingsValueChange(AzureSettings xx)
         {
-            Log.Information("Something changed");
+            if (_azureSettingsIOptionsMonitor.TenantName != xx.TenantName)
+            {
+                // Add your logic here
+                _azureSettingsIOptionsMonitor.TenantName = xx.TenantName;
+            }
+ 
         }
 
         public void OnGet()

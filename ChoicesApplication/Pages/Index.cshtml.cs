@@ -9,7 +9,6 @@ public class IndexModel : PageModel
 {
 
     private readonly IConfiguration _applicationSettingsWeakType;
-
     private readonly IOptionsSnapshot<ApplicationSettings> _applicationSettingsStrongTyped;
 
     public IndexModel(IConfiguration configuration, IOptionsSnapshot<ApplicationSettings> applicationSettings)
@@ -23,8 +22,7 @@ public class IndexModel : PageModel
 
         var title = _applicationSettingsWeakType["Position:Title"];
         var name = _applicationSettingsWeakType["Position:Name"];
-
-
+        
         var title1 = _applicationSettingsStrongTyped.Value.Title;
         var name1 = _applicationSettingsStrongTyped.Value.Name;
 
