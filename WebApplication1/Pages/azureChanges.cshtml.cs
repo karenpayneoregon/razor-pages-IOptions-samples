@@ -10,29 +10,22 @@ public class AzureChangesModel : PageModel
 {
     private readonly IOptionsMonitor<AzureSettings> _azureSettings;
 
-    [BindProperty]
-    public string TenantName { get; set; }
     private AzureSettings _azureSettingsIOptionsMonitor;
 
     public AzureChangesModel(IOptionsMonitor<AzureSettings> azureSettings)
     {
         _azureSettings = azureSettings;
         _azureSettingsIOptionsMonitor = _azureSettings.CurrentValue;
-        
+
         _azureSettings.OnChange(OnAzureSettingsValueChange);
     }
 
     private void OnAzureSettingsValueChange(AzureSettings azureSettings)
     {
         if (_azureSettingsIOptionsMonitor.TenantName != azureSettings.TenantName)
-        {
             _azureSettingsIOptionsMonitor.TenantName = azureSettings.TenantName;
-            TenantName = _azureSettingsIOptionsMonitor.TenantName;
-        }
-
     }
     public void OnGet()
     {
-        TenantName = _azureSettingsIOptionsMonitor.TenantName;
     }
 }

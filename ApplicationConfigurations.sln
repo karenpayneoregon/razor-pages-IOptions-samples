@@ -54,6 +54,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExcelConnectionApplication"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Windows forms", "Windows forms", "{F0988B0C-DA51-4BE7-A3B2-4CD8FAAE8E5E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IOptionsMonitorAzureSettingsApp", "IOptionsMonitorAzureSettingsApp\IOptionsMonitorAzureSettingsApp.csproj", "{3A211953-7453-4AA4-A88D-C02D3E5471E6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -136,6 +138,10 @@ Global
 		{58222B09-19AB-4FC9-B675-785CB44454FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{58222B09-19AB-4FC9-B675-785CB44454FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{58222B09-19AB-4FC9-B675-785CB44454FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A211953-7453-4AA4-A88D-C02D3E5471E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A211953-7453-4AA4-A88D-C02D3E5471E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A211953-7453-4AA4-A88D-C02D3E5471E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A211953-7453-4AA4-A88D-C02D3E5471E6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -160,6 +166,7 @@ Global
 		{1BB04F0E-D783-4761-ADE0-01BD2D2548DA} = {DC29F854-5C2E-42A0-B26C-DD09C303E040}
 		{58B4D2E5-9D10-400E-8AF2-3B6ABEB86FA2} = {DC29F854-5C2E-42A0-B26C-DD09C303E040}
 		{58222B09-19AB-4FC9-B675-785CB44454FC} = {F0988B0C-DA51-4BE7-A3B2-4CD8FAAE8E5E}
+		{3A211953-7453-4AA4-A88D-C02D3E5471E6} = {DC29F854-5C2E-42A0-B26C-DD09C303E040}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6EFB37AF-A28C-4516-A4B0-49E55C9955FC}
