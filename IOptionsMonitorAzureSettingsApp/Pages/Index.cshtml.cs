@@ -22,13 +22,27 @@ public class IndexModel : PageModel
     public string DefaultTenantId { get; private set; } = string.Empty;
     public string TenantNameConnectionString { get; private set; } = string.Empty;
     public string TenantNameTenantId { get; private set; } = string.Empty;
-    public string LastChangeNotification { get; private set; } = "string.Empty";
+    public string LastChangeNotification { get; private set; } = "place holder";
 
+    /// <summary>
+    /// Initializes a new instance of the <see cref="IndexModel"/> class.
+    /// </summary>
+    /// <param name="optionsMonitor">
+    /// An instance of <see cref="IOptionsMonitor{TOptions}"/> for monitoring changes to 
+    /// <see cref="AzureSettings"/> configuration.
+    /// </param>
+    /// <remarks>
+    /// This constructor injects the <see cref="IOptionsMonitor{TOptions}"/> service, which is used to 
+    /// retrieve and monitor the current and named configurations for Azure settings.
+    /// </remarks>
     public IndexModel(IOptionsMonitor<AzureSettings> optionsMonitor)
     {
         _optionsMonitor = optionsMonitor;
     }
 
+    /// <summary>
+    /// Ensures that the Azure settings are loaded and available for use in the page.
+    /// </summary>
     public void OnGet()
     {
         LoadSettings();
@@ -60,6 +74,7 @@ public class IndexModel : PageModel
         if (latestSettings.ConnectionString != _lastDefaultConnectionString)
         {
             hasChanged = true;
+
             message = "Default ConnectionString changed.";
 
             Log.Information("Default ConnectionString changed to {P1} from {P2}",
@@ -71,6 +86,7 @@ public class IndexModel : PageModel
         else if (latestSettings.TenantId != _lastDefaultTenantId)
         {
             hasChanged = true;
+
             message = "Default TenantId changed.";
 
             Log.Information("Default TenantId changed to {P1} from {P2}",
@@ -84,6 +100,7 @@ public class IndexModel : PageModel
         if (latestTenantSettings.ConnectionString != _lastTenantConnectionString)
         {
             hasChanged = true;
+
             message = "TenantName ConnectionString changed.";
 
             Log.Information("TenantName ConnectionString changed to {P1} from {P2}",
@@ -95,6 +112,7 @@ public class IndexModel : PageModel
         else if (latestTenantSettings.TenantId != _lastTenantTenantId)
         {
             hasChanged = true;
+
             message = "TenantName TenantId changed.";
 
             Log.Information("TenantName TenantId changed to {P1} from {P2}",
