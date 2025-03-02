@@ -1,3 +1,4 @@
+using IOptionsMonitorAzureSettingsApp.Classes;
 using IOptionsMonitorAzureSettingsApp.Models;
 using IOptionsMonitorAzureSettingsApp.Services;
 
@@ -9,15 +10,18 @@ public class Program
     {
         var builder = WebApplication.CreateBuilder(args);
 
-        builder.Services.Configure<AzureSettings>(
-            builder.Configuration.GetSection(nameof(AzureSettings)));
+        SetupLogging.Development();
 
-        // Register named options for different tenants
-        builder.Services.Configure<AzureSettings>(
-            "TenantName", builder.Configuration.GetSection("TenantNameAzureSettings"));
+        // Load configuration with reload on change
+        builder.Configuration.AddJsonFile("appsettings.json", optional: false, reloadOnChange: true);
 
-        // Register the Singleton Service
+        // Register IOptionsMonitor with reloading enabled
+        builder.Services.Configure<AzureSettings>(builder.Configuration.GetSection("AzureSettings"));
+        builder.Services.Configure<AzureSettings>("TenantName", builder.Configuration.GetSection("TenantNameAzureSettings"));
+
+        // Register our services
         builder.Services.AddSingleton<AzureService>();
+        builder.Services.AddScoped<SettingsService>();
 
         // Add services to the container.
         builder.Services.AddRazorPages();

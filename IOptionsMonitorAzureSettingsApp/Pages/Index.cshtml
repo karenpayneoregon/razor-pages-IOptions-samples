@@ -4,7 +4,31 @@
     ViewData["Title"] = "Home page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="container">
+    <h2>Azure Settings</h2>
+
+    <p><strong>Default Connection String:</strong> @Model.DefaultConnectionString</p>
+    <p><strong>Default Tenant ID:</strong> @Model.DefaultTenantId</p>
+
+    <p><strong>TenantName Connection String:</strong> @Model.TenantNameConnectionString</p>
+    <p><strong>TenantName Tenant ID:</strong> @Model.TenantNameTenantId</p>
+
+    @if (!string.IsNullOrEmpty(Model.LastChangeNotification))
+    {
+        <p style="color: red;"><strong>Last Change Detected:</strong> @Model.LastChangeNotification</p>
+    }
+
+    <script>
+        setInterval(() => {
+            fetch('?handler=CheckForUpdate')
+                .then(response => response.json())
+                .then(data => {
+                    if (data.updated) {
+                        //alert(data.message);
+                        location.reload(); // Refresh page if settings changed
+                    }
+                });
+        }, 8000); // Check every n seconds
+    </script>
 </div>
+
