@@ -61,9 +61,8 @@ public class IndexModel : PageModel
         {
             hasChanged = true;
             message = "Default ConnectionString changed.";
-            LastChangeNotification = message;
-            
-            Log.Information("Default ConnectionString changed to {P1} from {P2}", 
+
+            Log.Information("Default ConnectionString changed to {P1} from {P2}",
                 latestSettings.ConnectionString,
                 _lastDefaultConnectionString);
 
@@ -73,12 +72,10 @@ public class IndexModel : PageModel
         {
             hasChanged = true;
             message = "Default TenantId changed.";
-            LastChangeNotification = message;
 
             Log.Information("Default TenantId changed to {P1} from {P2}",
                 latestSettings.TenantId,
                 _lastDefaultTenantId);
-
 
             _lastDefaultTenantId = latestSettings.TenantId;
         }
@@ -88,7 +85,6 @@ public class IndexModel : PageModel
         {
             hasChanged = true;
             message = "TenantName ConnectionString changed.";
-            LastChangeNotification = message;
 
             Log.Information("TenantName ConnectionString changed to {P1} from {P2}",
                 latestTenantSettings.ConnectionString,
@@ -100,11 +96,11 @@ public class IndexModel : PageModel
         {
             hasChanged = true;
             message = "TenantName TenantId changed.";
-            LastChangeNotification = message;
 
             Log.Information("TenantName TenantId changed to {P1} from {P2}",
                 latestTenantSettings.TenantId,
                 _lastTenantTenantId);
+
             _lastTenantTenantId = latestTenantSettings.TenantId;
         }
 
@@ -116,6 +112,7 @@ public class IndexModel : PageModel
 
         return new JsonResult(new { updated = false });
     }
+
 
     private void LoadSettings()
     {

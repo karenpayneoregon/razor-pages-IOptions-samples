@@ -13,10 +13,8 @@
     <p><strong>TenantName Connection String:</strong> @Model.TenantNameConnectionString</p>
     <p><strong>TenantName Tenant ID:</strong> @Model.TenantNameTenantId</p>
 
-    @if (!string.IsNullOrEmpty(Model.LastChangeNotification))
-    {
-        <p style="color: red;"><strong>Last Change Detected:</strong> @Model.LastChangeNotification</p>
-    }
+    <!-- This notification will be updated dynamically via JavaScript -->
+    <p id="changeNotification" style="color: crimson; font-weight: bold;"></p>
 
     <script>
         setInterval(() => {
@@ -24,11 +22,11 @@
                 .then(response => response.json())
                 .then(data => {
                     if (data.updated) {
-                        //alert(data.message);
-                        location.reload(); // Refresh page if settings changed
+                        document.getElementById("changeNotification").innerText = data.message;
+                        setTimeout(() => location.reload(), 3000); // Refresh page after 3 seconds
                     }
                 });
-        }, 8000); // Check every n seconds
+        }, 5000); // Check every 5 seconds
     </script>
 </div>
 
