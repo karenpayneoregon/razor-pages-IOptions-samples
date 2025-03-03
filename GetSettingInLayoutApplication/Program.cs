@@ -15,6 +15,7 @@ public class Program
             builder.Configuration.GetSection(nameof(HelpDesk)));
 
         SetupLogging.Development();
+
         var app = builder.Build();
 
         // Configure the HTTP request pipeline.
