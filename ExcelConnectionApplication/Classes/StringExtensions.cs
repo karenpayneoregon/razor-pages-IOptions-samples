@@ -1,11 +1,12 @@
 ﻿namespace ExcelConnectionApplication.Classes;
 public static class StringExtensions
 {
+
     /// <summary>
-    /// Splits a camel case or Pascal case string into separate words.
+    /// Splits a PascalCase or camelCase string into separate words by inserting spaces before uppercase letters.
     /// </summary>
     /// <param name="input">The input string to be split.</param>
-    /// <returns>A string with spaces inserted between words.</returns>
+    /// <returns>A new string with spaces inserted before uppercase letters, or the original string if it is null or empty.</returns>
     public static string SplitCase(this string input)
     {
         if (string.IsNullOrEmpty(input)) return input;
