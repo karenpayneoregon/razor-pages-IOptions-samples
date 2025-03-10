@@ -28,11 +28,9 @@ namespace ReadSettingsConsoleApplication.Classes
                     builder.AddConfiguration(ConfigurationRoot().GetSection("Logging"));
                 });
 
-                services.Configure<ConnectionStrings>(ConfigurationRoot()
-                    .GetSection(nameof(ConnectionStrings)));
+                services.Configure<ConnectionStrings>(ConfigurationRoot().GetSection(nameof(ConnectionStrings)));
 
-                services.Configure<Category>(ConfigurationRoot()
-                    .GetSection(nameof(Category)));
+                services.Configure<Category>(ConfigurationRoot().GetSection(nameof(Category)));
 
                 services.AddTransient<DataOperations>();
                 services.AddTransient<CategoryOperations>();
