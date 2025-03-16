@@ -10,5 +10,9 @@
 public class DirectoryOptions
 {
     public const string Key = "DirectorySettings";
+    /// <summary>
+    /// Location of the directory containing configuration files for Key-per-file configuration.
+    /// </summary>
     public string DirectoryPath { get; set; } = string.Empty;
 }
+
