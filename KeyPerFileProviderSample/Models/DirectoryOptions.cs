@@ -9,6 +9,9 @@
 /// </remarks>
 public class DirectoryOptions
 {
+    /// <summary>
+    /// Specifies the section in appsettings.json containing this configuration.
+    /// </summary>
     public const string Key = "DirectorySettings";
     /// <summary>
     /// Location of the directory containing configuration files for Key-per-file configuration.
