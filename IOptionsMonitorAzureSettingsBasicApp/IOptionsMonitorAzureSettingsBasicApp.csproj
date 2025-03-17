@@ -8,7 +8,7 @@
 	<ItemGroup>
 		<!-- for comparing objects -->
 		<PackageReference Include="CompareNETObjects" Version="4.83.0" />
-		<PackageReference Include="Serilog.AspNetCore" Version="7.0.0" />
-		<PackageReference Include="SeriLogThemesLibrary" Version="1.0.0.1" />
+		<PackageReference Include="Serilog.AspNetCore" Version="9.0.0" />
+		<PackageReference Include="SeriLogThemesLibrary" Version="1.0.0.2" />
 	</ItemGroup>
 </Project>

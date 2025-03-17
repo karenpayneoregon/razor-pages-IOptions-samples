@@ -69,7 +69,14 @@ public class IndexModel : PageModel
         if (result.AreEqual)
             return;
 
-        
+        //result.Differences.ForEach(difference =>
+        //{
+        //    Log.Information("{P1} changed from {P2} to {P3}",
+        //        difference.PropertyName,
+        //        difference.Object1Value,
+        //        difference.Object2Value);
+        //});
+
         if (_azureSettingsIOptionsMonitor.TenantName != azureSettings.TenantName)
         {
             Log.Information("TenantName changed from {P1} to {P2}",

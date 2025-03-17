@@ -1,4 +1,6 @@
-﻿namespace KeyPerFileProviderSample.Models;
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace KeyPerFileProviderSample.Models;
 
 /// <summary>
 /// Represents configuration options for a directory used in the application read from appsettings.json.
@@ -16,6 +18,7 @@ public class DirectoryOptions
     /// <summary>
     /// Location of the directory containing configuration files for Key-per-file configuration.
     /// </summary>
+    [Required]
     public string DirectoryPath { get; set; } = string.Empty;
 }
 

@@ -13,7 +13,15 @@ public class Program
         // Add services to the container.
         builder.Services.AddRazorPages();
 
-        SetupLogging.Development();
+        // Configure Serilog
+        Log.Logger = new LoggerConfiguration()
+            .MinimumLevel.Override("Microsoft", Serilog.Events.LogEventLevel.Warning)
+            .MinimumLevel.Override("System", Serilog.Events.LogEventLevel.Warning)
+            .MinimumLevel.Information()
+            .WriteTo.Console()
+            .CreateLogger();
+
+        builder.Host.UseSerilog();
 
         MainConfigurations(builder);
         ConfigurePageTitles(builder);
