@@ -39,6 +39,7 @@ public class Program
         builder.Configuration.AddKeyPerFile(directoryPath: secretsPath, optional: true);
 
         builder.Services.Configure<HelpDesk>(builder.Configuration);
+        builder.Services.Configure<Connections>(builder.Configuration);
 
         var app = builder.Build();
 

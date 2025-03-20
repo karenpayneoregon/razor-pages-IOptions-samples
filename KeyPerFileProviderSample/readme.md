@@ -12,6 +12,11 @@ If the directory does not exist, the application will throw an exception in Prog
 ```csharp
 builder.Services.AddSingleton<IValidateOptions<DirectoryOptions>, DirectoryOptionsValidator>();
 ```
+### Files
+
+Are in the `assets` folder. Copy them to the folder set in `DirectoryPath` in `appsettings.json`
+
+
 
 ### In appsettings,json
 
@@ -29,3 +34,5 @@ builder.Services.AddSingleton<IValidateOptions<DirectoryOptions>, DirectoryOptio
   }
 }
 ```
+
+Microsoft docs: [Key-per-file configuration provider](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/configuration/?view=aspnetcore-9.0#key-per-file-configuration-providers)
