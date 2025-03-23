@@ -60,6 +60,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IOptionsMonitorAzureSetting
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KeyPerFileProviderSample", "KeyPerFileProviderSample\KeyPerFileProviderSample.csproj", "{8BAB958E-B962-4325-9BB7-950DF909001D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValidateOnStartWithClasses", "ValidateOnStartWithClasses\ValidateOnStartWithClasses.csproj", "{D7723152-9AF4-4DB8-BE11-A686F1926900}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -154,6 +156,10 @@ Global
 		{8BAB958E-B962-4325-9BB7-950DF909001D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8BAB958E-B962-4325-9BB7-950DF909001D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8BAB958E-B962-4325-9BB7-950DF909001D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7723152-9AF4-4DB8-BE11-A686F1926900}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7723152-9AF4-4DB8-BE11-A686F1926900}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7723152-9AF4-4DB8-BE11-A686F1926900}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7723152-9AF4-4DB8-BE11-A686F1926900}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -181,6 +187,7 @@ Global
 		{3A211953-7453-4AA4-A88D-C02D3E5471E6} = {DC29F854-5C2E-42A0-B26C-DD09C303E040}
 		{C861BB6C-D62B-4D86-9DF3-FCCAB49FF621} = {DC29F854-5C2E-42A0-B26C-DD09C303E040}
 		{8BAB958E-B962-4325-9BB7-950DF909001D} = {DC29F854-5C2E-42A0-B26C-DD09C303E040}
+		{D7723152-9AF4-4DB8-BE11-A686F1926900} = {DC29F854-5C2E-42A0-B26C-DD09C303E040}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6EFB37AF-A28C-4516-A4B0-49E55C9955FC}
