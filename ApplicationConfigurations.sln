@@ -62,6 +62,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KeyPerFileProviderSample", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValidateOnStartWithClasses", "ValidateOnStartWithClasses\ValidateOnStartWithClasses.csproj", "{D7723152-9AF4-4DB8-BE11-A686F1926900}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValidatorLibrary", "ValidatorLibrary\ValidatorLibrary.csproj", "{949DBF5E-F879-4132-9E3E-94EE0111D55F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValidateOnStartWithClasses1", "ValidateOnStartWithClasses1\ValidateOnStartWithClasses1.csproj", "{C0D17F3A-4352-44A5-B1DD-00FDEDF3919A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -160,6 +164,14 @@ Global
 		{D7723152-9AF4-4DB8-BE11-A686F1926900}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D7723152-9AF4-4DB8-BE11-A686F1926900}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D7723152-9AF4-4DB8-BE11-A686F1926900}.Release|Any CPU.Build.0 = Release|Any CPU
+		{949DBF5E-F879-4132-9E3E-94EE0111D55F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{949DBF5E-F879-4132-9E3E-94EE0111D55F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{949DBF5E-F879-4132-9E3E-94EE0111D55F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{949DBF5E-F879-4132-9E3E-94EE0111D55F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0D17F3A-4352-44A5-B1DD-00FDEDF3919A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0D17F3A-4352-44A5-B1DD-00FDEDF3919A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0D17F3A-4352-44A5-B1DD-00FDEDF3919A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0D17F3A-4352-44A5-B1DD-00FDEDF3919A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -188,6 +200,8 @@ Global
 		{C861BB6C-D62B-4D86-9DF3-FCCAB49FF621} = {DC29F854-5C2E-42A0-B26C-DD09C303E040}
 		{8BAB958E-B962-4325-9BB7-950DF909001D} = {DC29F854-5C2E-42A0-B26C-DD09C303E040}
 		{D7723152-9AF4-4DB8-BE11-A686F1926900} = {DC29F854-5C2E-42A0-B26C-DD09C303E040}
+		{949DBF5E-F879-4132-9E3E-94EE0111D55F} = {3E72E452-C60E-4DDF-AF97-302E6701E996}
+		{C0D17F3A-4352-44A5-B1DD-00FDEDF3919A} = {DC29F854-5C2E-42A0-B26C-DD09C303E040}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6EFB37AF-A28C-4516-A4B0-49E55C9955FC}
