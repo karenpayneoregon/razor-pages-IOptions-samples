@@ -16,6 +16,35 @@ namespace ValidatorLibrary.Validators;
 /// </remarks>
 public class SqlConnectionValidator : IValidateOptions<ConnectionStrings>
 {
+    /// <summary>
+    /// Validates the provided <see cref="ConnectionStrings"/> instance to ensure that the
+    /// <c>MainConnection</c> string is properly configured and can establish a connection to the SQL database.
+    /// </summary>
+    /// <param name="name">
+    /// The name of the options instance being validated. This parameter is optional and can be <c>null</c>.
+    /// </param>
+    /// <param name="options">
+    /// The <see cref="ConnectionStrings"/> instance containing the connection string to validate.
+    /// </param>
+    /// <returns>
+    /// A <see cref="ValidateOptionsResult"/> indicating whether the validation was successful or failed.
+    /// If validation fails, the result contains an error message describing the issue.
+    /// </returns>
+    /// <exception cref="ArgumentNullException">
+    /// Thrown if the <paramref name="options"/> parameter is <c>null</c>.
+    /// </exception>
+    /// <remarks>
+    /// This method performs the following checks:
+    /// <list type="bullet">
+    /// <item>
+    /// Ensures that the <c>MainConnection</c> string is not null, empty, or whitespace.
+    /// </item>
+    /// <item>
+    /// Attempts to establish a connection to the SQL database using the provided connection string.
+    /// If the connection cannot be established, the validation fails with an appropriate error message.
+    /// </item>
+    /// </list>
+    /// </remarks>
     public ValidateOptionsResult Validate(string? name, ConnectionStrings options)
     {
 
