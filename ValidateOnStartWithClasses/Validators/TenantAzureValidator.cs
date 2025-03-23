@@ -15,16 +15,20 @@ public class TenantAzureValidator : IValidateOptions<TenantAzureSettings>
 {
     public ValidateOptionsResult Validate(string? name, TenantAzureSettings options)
     {
+
+        if (options == null || string.IsNullOrWhiteSpace(options.ConnectionString))
+        {
+            return ValidateOptionsResult.Fail($"The '{nameof(TenantAzureSettings)}.{nameof(ConnectionStrings)}' section is missing or not configured.");
+        }
+
         if (string.IsNullOrWhiteSpace(options.ConnectionString))
         {
-            return ValidateOptionsResult.Fail(
-                $"{nameof(TenantAzureSettings)}.{nameof(TenantAzureSettings.ConnectionString)} is required.");
+            return ValidateOptionsResult.Fail($"{nameof(TenantAzureSettings)}.{nameof(TenantAzureSettings.ConnectionString)} is required.");
         }
 
         if (string.IsNullOrWhiteSpace(options.TenantId))
         {
-            return ValidateOptionsResult.Fail(
-                $"{nameof(TenantAzureSettings)}.{nameof(TenantAzureSettings.TenantId)} is required.");
+            return ValidateOptionsResult.Fail($"{nameof(TenantAzureSettings)}.{nameof(TenantAzureSettings.TenantId)} is required.");
         }
 
         if (!Guid.TryParse(options.TenantId, out _))

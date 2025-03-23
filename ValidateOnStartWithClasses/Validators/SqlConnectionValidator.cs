@@ -19,15 +19,14 @@ public class SqlConnectionValidator : IValidateOptions<ConnectionStrings>
     public ValidateOptionsResult Validate(string? name, ConnectionStrings options)
     {
 
-        if (options == null || IsUninitialized(options))
+        if (options == null || string.IsNullOrWhiteSpace(options.MainConnection))
         {
             return ValidateOptionsResult.Fail($"The '{nameof(ConnectionStrings)}' section is missing or not configured.");
         }
 
         if (string.IsNullOrWhiteSpace(options.MainConnection))
         {
-            return ValidateOptionsResult.Fail(
-                $"{nameof(ConnectionStrings.MainConnection)} string cannot be empty.");
+            return ValidateOptionsResult.Fail($"{nameof(ConnectionStrings.MainConnection)} string cannot be empty.");
         }
 
         try
@@ -53,15 +52,4 @@ public class SqlConnectionValidator : IValidateOptions<ConnectionStrings>
 
         return ValidateOptionsResult.Success;
     }
-
-    /// <summary>
-    /// Determines whether the specified <see cref="ConnectionStrings"/> instance is uninitialized.
-    /// </summary>
-    /// <param name="options">The <see cref="ConnectionStrings"/> instance to validate.</param>
-    /// <returns>
-    /// <c>true</c> if the <paramref name="options"/> instance is uninitialized, meaning its
-    /// <see cref="ConnectionStrings.MainConnection"/> property is null, empty, or consists only of whitespace;
-    /// otherwise, <c>false</c>.
-    /// </returns>
-    private static bool IsUninitialized(ConnectionStrings options) => string.IsNullOrWhiteSpace(options.MainConnection);
 }
