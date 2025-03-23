@@ -5,7 +5,7 @@ using ValidateOnStartWithClasses.Models;
 namespace ValidateOnStartWithClasses.Validators;
 
 /// <summary>
-/// Provides validation logic for <see cref="SqlConnectionOptions"/> to ensure that the
+/// Provides validation logic for <see cref="ConnectionStrings"/> to ensure that the
 /// <c>MainConnection</c> string is properly configured and a connection to the SQL database
 /// can be successfully established.
 /// </summary>
@@ -14,14 +14,20 @@ namespace ValidateOnStartWithClasses.Validators;
 /// Additionally, it attempts to establish a connection to the SQL database using the provided
 /// connection string to verify its validity.
 /// </remarks>
-public class SqlConnectionValidator : IValidateOptions<SqlConnectionOptions>
+public class SqlConnectionValidator : IValidateOptions<ConnectionStrings>
 {
-    public ValidateOptionsResult Validate(string? name, SqlConnectionOptions options)
+    public ValidateOptionsResult Validate(string? name, ConnectionStrings options)
     {
+
+        if (options == null || IsUninitialized(options))
+        {
+            return ValidateOptionsResult.Fail($"The '{nameof(ConnectionStrings)}' section is missing or not configured.");
+        }
+
         if (string.IsNullOrWhiteSpace(options.MainConnection))
         {
             return ValidateOptionsResult.Fail(
-                $"{nameof(SqlConnectionOptions.MainConnection)} string cannot be empty.");
+                $"{nameof(ConnectionStrings.MainConnection)} string cannot be empty.");
         }
 
         try
@@ -47,4 +53,15 @@ public class SqlConnectionValidator : IValidateOptions<SqlConnectionOptions>
 
         return ValidateOptionsResult.Success;
     }
+
+    /// <summary>
+    /// Determines whether the specified <see cref="ConnectionStrings"/> instance is uninitialized.
+    /// </summary>
+    /// <param name="options">The <see cref="ConnectionStrings"/> instance to validate.</param>
+    /// <returns>
+    /// <c>true</c> if the <paramref name="options"/> instance is uninitialized, meaning its
+    /// <see cref="ConnectionStrings.MainConnection"/> property is null, empty, or consists only of whitespace;
+    /// otherwise, <c>false</c>.
+    /// </returns>
+    private static bool IsUninitialized(ConnectionStrings options) => string.IsNullOrWhiteSpace(options.MainConnection);
 }

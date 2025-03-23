@@ -1,3 +1,4 @@
+using Microsoft.Data.SqlClient;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Options;
 using Serilog;
@@ -26,11 +27,7 @@ public class Program
             .SqlConnectionValidation(builder.Configuration)
             .TenantValidation(builder.Configuration);
 
-        var configuration = builder.Configuration;
-        var conn = configuration.GetSection("ConnectionStrings").Get<ConnectionStrings>();
-        //builder.Services.AddValidatedOptions<SqlConnectionOptions, SqlConnectionValidator>(configuration);
-        //builder.Services.AddValidatedOptions<TenantAzureSettings, TenantAzureValidator>(configuration);
-
+        //ForArticle(builder);
 
         var app = builder.Build();
 
@@ -53,5 +50,33 @@ public class Program
         app.Run();
     }
 
-   
+    private static void ForArticle(WebApplicationBuilder builder)
+    {
+        builder.Services.AddOptions<ConnectionStrings>()
+            .BindConfiguration(nameof(ConnectionStrings))
+            .ValidateDataAnnotations()
+            .Validate(cs =>
+                {
+                    try
+                    {
+
+                        var sb = new SqlConnectionStringBuilder(cs.MainConnection)
+                        {
+                            ConnectTimeout = 2
+                        };
+
+                        using SqlConnection connection = new(sb.ConnectionString);
+
+                        connection.Open();
+                        connection.Close();
+                        return true;
+
+                    }
+                    catch (Exception ex)
+                    {
+                        return false;
+                    }
+                }, $"Failed to open SQL connection: {nameof(ConnectionStrings.MainConnection)} ")
+            .ValidateOnStart();
+    }
 }
