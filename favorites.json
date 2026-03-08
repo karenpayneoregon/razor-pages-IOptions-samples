@@ -1,0 +1,26 @@
+{
+  "version": 2,
+  "items": [
+    {
+      "name": "Validators",
+      "children": [
+        {
+          "name": "SqlConnectionValidator.cs",
+          "path": "ValidatorLibrary\\Validators\\SqlConnectionValidator.cs"
+        },
+        {
+          "name": "ValidationExtensions.cs",
+          "path": "ValidateOnStartWithClasses\\Classes\\ValidationExtensions.cs"
+        },
+        {
+          "name": "ValidationExtensions.cs",
+          "path": "ValidatorLibrary\\Classes\\ValidationExtensions.cs"
+        }
+      ]
+    },
+    {
+      "name": "StringExtensions.cs",
+      "path": "DependencyInjectionConsoleApplication\\LanguageExtensions\\StringExtensions.cs"
+    }
+  ]
+}

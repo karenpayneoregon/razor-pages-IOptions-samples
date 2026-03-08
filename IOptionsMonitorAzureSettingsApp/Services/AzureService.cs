@@ -47,15 +47,13 @@ public class AzureService
         bool hasChanged = false;
         string message = $"{key} settings changed: ";
 
-        if (_lastKnownValues.TryGetValue($"{key}_ConnectionString", out var oldConnectionString) &&
-            oldConnectionString != newSettings.ConnectionString)
+        if (_lastKnownValues.TryGetValue($"{key}_ConnectionString", out var oldConnectionString) && oldConnectionString != newSettings.ConnectionString)
         {
             message += "ConnectionString updated. ";
             hasChanged = true;
         }
 
-        if (_lastKnownValues.TryGetValue($"{key}_TenantId", out var oldTenantId) &&
-            oldTenantId != newSettings.TenantId)
+        if (_lastKnownValues.TryGetValue($"{key}_TenantId", out var oldTenantId) && oldTenantId != newSettings.TenantId)
         {
             message += "TenantId updated.";
             hasChanged = true;

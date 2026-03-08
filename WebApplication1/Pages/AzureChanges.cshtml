@@ -3,3 +3,45 @@
 @{
 }
 
+<div class="container text-center">
+    Tenant Name: <span id="tenantNameDisplay" class="fw-bold text-success">@Model.TenantName</span>
+</div>
+
+
+<script>
+    /*
+     * Periodically polls the server for the current tenant name and updates the UI if it changes.
+     *
+     * - `currentTenantName`: Stores the last known tenant name to detect changes.
+     * - `pollTenantName()`:
+     *    - Sends a GET request to the `/AzureChanges?handler=TenantName` endpoint.
+     *    - If the response text (tenant name) differs from the last known value, updates the
+     *      `#tenantNameDisplay` element in the DOM.
+     *    - Strips any double quotes from the received tenant name.
+     *    - Logs an error to the console if the fetch fails.
+     * - `setInterval(pollTenantName, 5000)`: Calls the polling function every 5 seconds.
+     * - `window.onload = pollTenantName`: Runs the polling function once on page load.
+     *
+     * Assumes an element with the ID `tenantNameDisplay` exists (which it does) in the DOM to display the tenant name.
+     */
+
+    let currentTenantName = "";
+
+    async function pollTenantName() {
+        try {
+            const response = await fetch('/AzureChanges?handler=TenantName');
+            const tenantName = await response.text();
+
+            if (tenantName !== currentTenantName) {
+                currentTenantName = tenantName;
+                document.getElementById('tenantNameDisplay').innerText = tenantName.replace(/"/g, '');
+            }
+        } catch (err) {
+            console.error('Failed to fetch tenant name:', err);
+        }
+    }
+
+    setInterval(pollTenantName, 5000); 
+    window.onload = pollTenantName;
+
+</script>

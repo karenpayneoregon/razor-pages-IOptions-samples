@@ -4,8 +4,8 @@ namespace IOptionsMonitorAzureSettingsApp.Services;
 
 public class SettingsService
 {
-    public AzureSettings DefaultSettings { get; private set; } = new AzureSettings();
-    public AzureSettings TenantSettings { get; private set; } = new AzureSettings();
+    public AzureSettings DefaultSettings { get; private set; } = new();
+    public AzureSettings TenantSettings { get; private set; } = new();
     public string LastChangeNotification { get; private set; } = string.Empty;
     public DateTime LastUpdated { get; private set; } = DateTime.UtcNow;
 

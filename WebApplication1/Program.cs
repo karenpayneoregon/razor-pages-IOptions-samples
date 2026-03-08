@@ -33,10 +33,11 @@ public class Program
 
         var app = builder.Build();
 
-        if (app.Configuration is IConfigurationRoot configurationRoot)
-        {
-            Log.Information(configurationRoot.GetDebugView());
-        }
+        // code works
+        //if (app.Configuration is IConfigurationRoot configurationRoot)
+        //{
+        //    Log.Information(configurationRoot.GetDebugView());
+        //}
 
         // Configure the HTTP request pipeline.
         if (!app.Environment.IsDevelopment())
